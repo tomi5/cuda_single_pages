@@ -114,10 +114,12 @@ address {
 
 .nav {
     position: absolute;
+    top: 0;
     width: 100%;
     background-color: #864f9c;
-    min-height: 50%;
+    height: 100vh;
     visibility: hidden;
+    padding-top: 4em;
 }
 
 .nav__list {
@@ -155,7 +157,7 @@ address {
 .logo__img {
     width: 100%;
     height: auto;
-}
+   }
 
 
 .header__h1 {
@@ -308,9 +310,19 @@ address {
     background-color: rgba( 0, 0, 0, 0.2);
 }
 
+.btn:active {
+    transform: translateY(4px);
+}
+
+
+.btn--header {
+    background-color: #eb7d4b;
+}
+
+
 .btn--hamburger {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     width: auto;
     height: auto;
     transform: rotate(90deg);
@@ -324,35 +336,33 @@ address {
     top: 10%;
     right: 10%;
     text-align: center;
+    z-index: 99999;
+}
+
+.toggle {
+  display: none; 
+}
+
+.btn--hamburger:hover {
+    background-color: inherit;
 }
 
 
-.btn--hamburger:active
-{
+.btn--hamburger:active,
+.toggle:checked ~ .btn--hamburger {
     background-color: inherit;
-    transform: rotate(180deg);
-    
+    transform: rotate(180deg) translateY(0px);
     padding-right: 10px;
     letter-spacing: 0.1em; 
     font-size: 1.8rem;
-}
-
-
-.btn--hamburger:focus~.nav,
-.btn--hamburger:target~.nav
-{
-    visibility: visible;
-}
     
-
-.btn:active {
-    transform: translateY(4px);
 }
 
 
-.btn--header {
-    background-color: #eb7d4b;
+.toggle:checked ~ .nav {
+  visibility: visible;
 }
+
 
 /* button in  portfolio section */
 
