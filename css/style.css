@@ -54,6 +54,8 @@ address {
 
 .section--header {
     background-color: #864f9c;
+	z-index: 3;
+	position: relative;
 }
 
 .section--services {
@@ -655,3 +657,34 @@ address {
     text-align: center;
     white-space: nowrap;
 }
+
+.btn--back {
+	display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #864f9c;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+	opacity: 0.3;
+    z-index: 2;
+	border: none;
+	
+	
+}
+
+btn--back__img {
+	width: 100%;
+	height: auto;
+}
+
+
+.btn--back:hover{
+	background-color: #864f9c;
+	transform: scale(1.5);
+	opacity: 1;
+}
+
