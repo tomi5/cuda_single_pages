@@ -16,9 +16,6 @@ GENERAL
 }
 
 
-html {
-    scroll-behavior: smooth;
-}
 
 
 body {
@@ -127,9 +124,14 @@ address {
 }
 
 .nav__list__item {
+    font-size: 1.1rem;
     display: inline-block;
     margin: .5em;
     padding: .5em 1em;
+    line-height: 1.1;
+    color: #ffffff;
+    text-transform: uppercase;
+
 }
 
 .nav__list__item:hover,
@@ -265,24 +267,12 @@ address {
     width: 100%;
 }
 
-.nav__list__item {
-    font-size: 1rem;
-    line-height: 1.1;
-    color: #ffffff;
-    text-transform: uppercase;
-
-}
 
 /*
     ============
      stop set a font properites
     ============
 */
-
-.nav__list__item:hover {
-    border-radius: 4px;
-    background-color: #643a79;
-}
 
 
 /*
@@ -336,7 +326,7 @@ address {
     top: 10%;
     right: 10%;
     text-align: center;
-    z-index: 99999;
+    z-index: 9999;
 }
 
 .toggle {
@@ -358,11 +348,24 @@ address {
     
 }
 
+.toggle:checked ~ .logo {
+    position: absolute;
+    top: 0;
+    left: 2em;
+    z-index: 99999;
+    width: 20%;
+    height: auto;
+    
+} 
 
 .toggle:checked ~ .nav {
   visibility: visible;
 }
 
+.toggle:checked ~ .header__h1,
+.toogle:checked ~ .btn--header {
+    visibility: hidden;
+}
 
 /* button in  portfolio section */
 
