@@ -1,7 +1,7 @@
 /*
-===========================
-GENERAL
-===========================
+	===========================
+	GENERAL
+	===========================
 */
 
 * {
@@ -12,10 +12,7 @@ GENERAL
     padding: 0;
     list-style-type: none;
     outline: none;
-
 }
-
-
 
 
 body {
@@ -24,17 +21,7 @@ body {
     font-size: 1rem;
     line-height: 1;
     text-align: center;
-
 }
-
-button {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-
-
 
 h1,
 h2,
@@ -45,17 +32,14 @@ address {
     padding-bottom: .8em;
 }
 
-
 /*
     ============
-     star set a background color of each section
+    setting the background of each section
     ============
 */
 
 .section--header {
     background-color: #864f9c;
-	z-index: 3;
-	position: relative;
 }
 
 .section--services {
@@ -89,13 +73,7 @@ address {
 
 /*
     ============
-     stop set a background color of each section
-    ============
-*/
-
-/*
-    ============
-     start of sections dimensions
+     general settings of sections
     ============
 */
 
@@ -104,52 +82,19 @@ address {
     padding: 4em 0;
 }
 
-.section--header {
-    min-height: 100vh;
-    padding: 1em 0;
-}
-
-/* style of nav */
-
-.nav {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: #864f9c;
-    height: 100vh;
-    visibility: hidden;
-    padding-top: 4em;
-}
-
-.nav__list {
-    margin: 1em;
-}
-
-.nav__list__item {
-    font-size: 1.1rem;
-    display: inline-block;
-    margin: .5em;
-    padding: .5em 1em;
-    line-height: 1.1;
-    color: #ffffff;
-    text-transform: uppercase;
-
-}
-
-.nav__list__item:hover,
-.nav__list__item:focus {
-    border-radius: 4px;
-    background-color: #643a79;
-    padding: .5em 1em;
-
-
-}
 
 /*
     ============
-     start set a font properites
+     settings of sections header
     ============
 */
+
+.section--header {
+    min-height: 100vh;
+    padding: 1em 0;
+	position: relative;
+	z-index: 3;  /* button BACK TO TOP is not visible in header section */
+}
 
 .logo {
     display: inline-block;
@@ -161,20 +106,48 @@ address {
 .logo__img {
     width: 100%;
     height: auto;
-   }
+}
 
+.nav {
+    width: 100%;
+    height: 100%;
+	padding-top: 4em;
+	background-color: #864f9c;
+	position: absolute;
+    top: 0;
+	visibility: hidden; /* not visable for mobie */
+}
+
+.nav__list {
+    margin: 1em;
+}
+
+.nav__list__item {
+    display: inline-block;
+    margin: .5em;
+    padding: .5em 1em;
+	font-size: 1.1rem;
+    line-height: 1.1;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.nav__list__item:hover,
+.nav__list__item:focus {
+    padding: .5em 1em;
+	background-color: #643a79;
+    border-radius: 4px;
+}
 
 .header__h1 {
-    font-size: 2rem;
+    margin: 0 .8em;
+	font-size: 2rem;
     line-height: 1.7;
     color: #f7f3ea;
     font-weight: bold;
-    margin: 0 .8em;
 }
 
-/* break line in header for mobile */
-
-.br_for_mobile {
+.br_for_mobile { /* break line in header__h1 for mobile */
     display: inline;
 }
 
@@ -183,22 +156,28 @@ address {
     white-space: pre;
 }
 
+/*
+    ============
+     settings of h2 h3 and p fonts
+	 ============
+*/
+
 
 .section__h2 {
-    font-size: 2rem;
+    padding-bottom: 0;
+	font-size: 2rem;
     letter-spacing: .25rem;
     line-height: 1.2;
     text-transform: uppercase;
-    font-weight: bold;
-    padding-bottom: 0;
+    font-weight: bold;   
 }
 
-.section__h2:after {
-    width: 87px;
+.section__h2:after { /* line under sections header */
+	display: block;
+    content: '';
+	width: 87px;
     height: 4px;
     margin: 0.5em auto;
-    display: block;
-    content: '';
     background: #0003;
 }
 
@@ -226,15 +205,14 @@ address {
 .section__h2--light,
 .section__h3--light,
 .section__h2__p--light,
-.section__h3__p--light {
+.section__h3__p--light { /* text color for dark background */
     color: #ffffff;
 }
-
 
 .section__h2--dark,
 .section__h3--dark,
 .section__h2__p--dark,
-.section__h3__p--dark {
+.section__h3__p--dark { /* text color for light background */
     color: #3c4761;
 }
 
@@ -247,39 +225,29 @@ address {
 }
 
 .section__h3__p--quote {
-    font-size: 1rem;
-    font-style: italic;
-    width: 60%;
-    /* width set for flexbox*/
-    text-align: right;
     margin: 0;
-    padding: 1em .5em;
+    padding: 1em .5em;font-size: 1rem;
+	width: 60%; /* width set for flexbox*/
+    font-style: italic;    
+    text-align: right;    
 }
 
 .section__h3__p--yellow {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #ffdd99;
-
 }
 
 .section__h3--customer {
     padding: 0;
-    font-size: 1.3rem;
-    width: 100%;
+	width: 100%;
+    font-size: 1.3rem;    
 }
 
 
 /*
     ============
-     stop set a font properites
-    ============
-*/
-
-
-/*
-    ============
-     start button style
+    button settings
     ============
 */
 
@@ -289,6 +257,7 @@ address {
     padding: 1em 2em;
     width: 260px;
     border-radius: 4px;
+	border: none;
     border-bottom: 4px solid rgba( 0, 0, 0, 0.2);
     color: #ffffff;
     font-weight: bold;
@@ -306,29 +275,26 @@ address {
     transform: translateY(4px);
 }
 
-
-.btn--header {
-    background-color: #eb7d4b;
-}
-
+ /* start setting of hamburger button
+	visable only for mobile */
 
 .btn--hamburger {
-    margin: 0;
+	display: inline-block;
+	margin: 0;
     padding: 10px;
-    width: auto;
-    height: auto;
-    transform: rotate(90deg);
-    font-size: 2rem;
-    font-weight: bold;
-    background-color: inherit;
-    display: inline-block;
-    border-radius: inherit;
-    border: none;
-    position: absolute;
+	position: absolute;
     top: 10%;
     right: 10%;
-    text-align: center;
+    width: auto;
+    height: auto;
+    background-color: inherit;
+    border-radius: inherit;
+    border: none;
+	font-size: 2rem;
+    font-weight: bold;
+	text-align: center;
     z-index: 9999;
+	transform: rotate(90deg); /* makes horizontal lines */
 }
 
 .toggle {
@@ -341,39 +307,36 @@ address {
 
 
 .btn--hamburger:active,
-.toggle:checked ~ .btn--hamburger {
-    background-color: inherit;
-    transform: rotate(180deg) translateY(0px);
+.toggle:checked ~ .btn--hamburger { 
     padding-right: 10px;
+	background-color: inherit;
     letter-spacing: 0.1em; 
     font-size: 1.8rem;
-    
+    transform: rotate(180deg) translateY(0px);
 }
 
 .toggle:checked ~ .logo {
     position: absolute;
     top: 0;
     left: 2em;
-    z-index: 99999;
-    width: 20%;
-    height: auto;
-    
+	width: 20%;
+    height: auto;    
+    z-index: 99999;    
 } 
 
-.toggle:checked ~ .nav {
+.toggle:checked ~ .nav { /* shov nav if hamburger toogle is checkek */
   visibility: visible;
 }
 
-.toggle:checked ~ .header__h1,
-.toogle:checked ~ .btn--header {
-    visibility: hidden;
+/* end setting of hamburger button */
+
+.btn--header {
+    background-color: #eb7d4b;
 }
 
-/* button in  portfolio section */
-
 .btn__container {
-    width: 80%;
-    margin: 0 auto;
+	margin: 0 auto;
+    width: 80%;   
 }
 
 .btn--portfolio {
@@ -383,8 +346,7 @@ address {
     width: 84px;
     color: #393939;
     background-color: rgba(0, 0, 0, 0.0784313725490196);
-    border-bottom: none;
-
+    border: none;
 }
 
 .btn--portfolio:hover,
@@ -397,39 +359,66 @@ address {
 }
 
 .btn--send_msg {
-    background-color: #30bae7;
+    background-color: #30bae7;	
 }
+
+/* start setting of BACK TO TOP button */
+.btn--back {
+	display: inline-block;
+	margin: 0;
+    padding: 0;
+	position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 32px;
+    height: 32px;
+    background-color: #864f9c;
+    border: none;   
+    border-radius: 50%;
+	opacity: 0.3;
+    z-index: 2;	/* makes it always on top, except header section */	
+}
+
+.btn--back__img {
+	width: 100%;
+	height: auto;
+}
+
+.btn--back:hover{
+	background-color: #864f9c;
+	transform: scale(1.5);
+	opacity: 1;
+}
+
+/* end setting of BACK TO TOP button */
+
 
 /*
     ============
-     stop button style
+    images and photos settings
     ============
 */
 
-/* icons in service section */
-
 .services__icon {
-    width: 30%;
-    max-width: 170px;
-    height: auto;
     margin: 0 auto;
     padding: 2em 0 1em;
+	width: 30%;
+    max-width: 170px;
+    height: auto;    
 }
 
-/* employers photo */
-
 .photo__cropper {
-    width: 200px;
+	margin: 2em auto 1em;
+	width: 200px;
     height: 200px;
-    overflow: hidden;
     border-radius: 50%;
-    margin: 2em auto 1em;
+    overflow: hidden;
 }
 
 .photo__cropper--small {
-    width: 96px;
-    height: 96px;
     margin: 0;
+	width: 96px;
+    height: 96px;    
 }
 
 .photo {
@@ -440,11 +429,11 @@ address {
 }
 
 .portfolio__img {
-    width: 80%;
-    max-width: 540px;
-    height: auto;
     margin: 2.5em auto 0;
     padding: 0 0 1em;
+	width: 80%;
+    max-width: 540px;
+    height: auto;    
 }
 
 .portfolio__img:hover,
@@ -453,30 +442,22 @@ address {
 }
 
 
-
-
-
-
-
-/* employers contact conatainer */
-
-.contact__container {
+.contact__container { /*employer's social media container */
     display: inline-block;
     width: 70%;
 }
 
 .contact__link {
     display: inline-block;
-    width: 20%;
-    max-width: 32px;
     margin: 0 .5em;
+	width: 20%;
+    max-width: 32px;    
 }
 
 .contact__link__img {
     width: 100%;
     max-width: 32px;
     height: auto;
-
 }
 
 .contact__link__img:hover,
@@ -484,31 +465,80 @@ address {
     transform: scale(1.5);
 }
 
-/* testimoinials container */
-
 .testimonials__conteiner {
-    /* set as flexbox */
-    margin-top: 2em;
     display: flex;
     flex-wrap: wrap;
+	margin-top: 2em;   
     justify-content: center;
     align-items: center;
 }
 
 
+/*
+    ============
+    form style
+    ============
+*/
 
+.form__input,
+.form__textarea {
+    display: block;
+	margin: 1em auto;
+    padding: .5em;
+    width: 70%;
+    max-width: 90%;       
+    border: none;
+    border-radius: 4px;
+    background-color: #273a71;
+	font-family: inherit;
+    font-size: 1.125rem;	
+    line-height: 1.1;
+	color: #ffffff;
+    text-align: left;    
+}
+
+.form__textarea {
+    margin-top: 2em;
+    width: 90%;
+    min-height: 7em;
+}
+
+.form__input::-webkit-input-placeholder,
+.form__textarea::-webkit-input-placeholder {
+    font-family: inherit;
+	font-size: 1rem;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+
+.form__input:-ms-input-placeholder,
+.form__textarea:-ms-input-placeholder {
+    font-family: inherit;
+	font-size: 1rem;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+	font-family: inherit;
+	font-size: 1rem;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+/*
+    ============
+     footer style
+    ============
+*/
 
 .section--footer {
     padding: 2em 0;
 }
 
-/*
-    ============
-     start style of social media links in footer
-    ============
-*/
-
-.social_media_link {
+.footer__link {
     display: block;
     margin: .2em auto;
     padding: .5em;
@@ -521,170 +551,11 @@ address {
     text-decoration: none;
 }
 
-.social_media_link:hover,
-.social_media_link:focus {
+.footer__link:hover,
+.footer__link:focus {
     color: #30bae7;
 }
 
-/*
-    ============
-     stop style of social media links in footer
-    ============
-*/
-
-/*
-    ============
-     start style style of % circle of skills in section skills 
-    ============
-*/
-
-.circle_skill {
-    display: inline-block;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border: 10px solid #dfe8ed;
-    font-size: 3.125rem;
-    letter-spacing: .0625rem;
-    line-height: 1.3;
-    font-weight: 300;
-    line-height: 135px;
-    text-align: center;
-}
-
-/*
-    ============
-     stop style style of % circle of skills in section skills 
-    ============
-*/
-
-/*
-    ============
-     start form style
-    ============
-*/
-
-.form__input,
-.form__textarea {
-    display: block;
-    width: 70%;
-    max-width: 90%;
-    text-align: left;
-    margin: 1em auto;
-    padding: .5em;
-    border: none;
-    border-radius: 4px;
-    background-color: #273a71;
-    font-size: 1.125rem;
-    line-height: 1.1;
-    color: #ffffff;
-    font-family: "Titillium Web" sans-serif;
-}
-
-.form__textarea {
-    margin-top: 2em;
-    width: 90%;
-    min-height: 7em;
-}
-
-.form__input::-webkit-input-placeholder,
-.form__textarea::-webkit-input-placeholder {
-    font-size: 1rem;
-    line-height: 1.1;
-    color: #ffffff;
-    font-family: "Titillium Web" sans-serif;
-}
 
 
-.form__input:-ms-input-placeholder,
-.form__textarea:-ms-input-placeholder {
-    font-size: 1rem;
-    line-height: 1.1;
-    color: #ffffff;
-    font-family: "Titillium Web" sans-serif;
-}
-
-
-.form__input::placeholder,
-.form__textarea::placeholder {
-    font-size: 1.125rem;
-    line-height: 1.1;
-    color: #ffffff;
-    font-family: "Titillium Web" sans-serif;
-}
-
-/*
-    ============
-     stop form style
-    ============
-*/
-
-/*circle style */
-
-.c100 {
-    position: relative;
-    display: block;
-    background-color: red;
-    height: 100px;
-    width: 100px;
-    font-size: 30px;
-    margin: 0 0.1em 0.1em 0;
-    border-radius: 50%;
-
-}
-
-.c100:after {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: block;
-    content: "";
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    background-color: blue;
-}
-
-.percentage {
-    position: absolute;
-    display: block;
-    font-size: 1em;
-    width: 100px;
-    line-height: 100px;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.btn--back {
-	display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-color: #864f9c;
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
-    margin: 0;
-    padding: 0;
-    border-radius: 50%;
-	opacity: 0.3;
-    z-index: 2;
-	border: none;
-	
-	
-}
-
-btn--back__img {
-	width: 100%;
-	height: auto;
-}
-
-
-.btn--back:hover{
-	background-color: #864f9c;
-	transform: scale(1.5);
-	opacity: 1;
-}
 
