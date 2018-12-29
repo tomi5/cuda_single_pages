@@ -1,5 +1,5 @@
 # cuda_single_pages
-Project Title
+Project Title:
 PSD TO HTML
 My first try to make a responsive single page website from PSD.
 Mobile First approach
