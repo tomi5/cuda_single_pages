@@ -14,15 +14,15 @@
 
     <header id="home" class="section section--header grid">
       
-        <input type="checkbox" id="toggle" name="toggle" class="toggle">
-        <label for="toggle" class="btn btn--hamburger">|||</label>
+        <input type="checkbox" id="toggle" name="toggle" class="toggle"> <!-- toggle for hamburger button -->
+        <label for="toggle" class="btn btn--hamburger">|||</label> <!-- humburger button - visible only on mobile -->
         
-          <a href="#home" class="logo">
+         <a href="#home" class="logo">
             <img src="images/cuda_logo.png" alt="logo of company" class="logo__img">
         </a>
 
        
-        <nav class="nav">
+        <nav class="nav"> <!-- hidden for mobile -- press humburger button to appear -->
 
             <ul class="nav__list">
                 <li><a href="#home" class="nav__list__item">home</a></li>
@@ -33,38 +33,44 @@
             </ul>
         </nav>
 
-        <h1 class="header__h1">Hi there! <span class="br_for_mobile"> We are the new kids on the block and we build awesome website and mobile apps.</span></h1>
+        <h1 class="header__h1">Hi there! <span class="br_for_mobile"> We are the new kids on the block and we build awesome website and mobile apps.</span></h1>  <!-- span - break a line for mobile -->
 
-        <a href="#contact" class="btn btn--header" role="button" aria-pressed="true">work with us!</a>
+        <a href="#contact" class="btn btn--header" role="button" aria-pressed="true">work with us!</a>  <!-- header button -->
 
 
     </header>
 
-    <main>
 	
+    <main>	
 		
-		<a href="#" class="btn btn--back">
+		
+		<a href="#" class="btn btn--back">	<!-- back to the top button -->
 			<img src="css/img/arrow_icon.png" alt="facebook icon" class="btn--back__img">			
 		</a>
 		
 
         <!-- section services we provide -->
         <section id="about" class="section section--services grid">
+				
             <h2 class="section__h2 section__h2--light">services we provide</h2>
             <p class="section__h2__p section__h2__p--light">We are working with both individuals and businesses from all over the globe to create awesome websites and aplications</p>
 
+			
             <img src="images/flag_icon.png" alt="icon of flag" class="services__icon">
             <h3 class="section__h3 section__h3--light">Branding</h3>
             <p class="section__h3__p section__h3__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
 
+			
             <img src="images/pen_icon.png" alt="icon of pen" class="services__icon">
             <h3 class="section__h3 section__h3--light">Designed</h3>
             <p class="section__h3__p section__h3__p--light">Vero in fugit maiores, at eius rem repellendus ab odit excepturi recusandae nobis natus. </p>
 
+			
             <img src="images/gears_icon.png" alt="icon of gears" class="services__icon">
             <h3 class="section__h3 section__h3--light">Development</h3>
             <p class="section__h3__p section__h3__p--light">Ipsam vitae velit labore qui autem et veniam, nemo error.</p>
 
+			
             <img src="images/rocket_icon.png" alt="icon of rocket" class="services__icon">
             <h3 class="section__h3 section__h3--light">Rocket Science</h3>
             <p class="section__h3__p section__h3__p--light">Amet dolore autem, magnam eligendi assumenda optio provident similique fugiat.</p>
@@ -73,7 +79,8 @@
 
         <!-- section meet our beautiful team -->
         <section class="section section--team grid">
-            <h2 class="section__h2 section__h2--dark">Meet our beautiful team</h2>
+            
+			<h2 class="section__h2 section__h2--dark">Meet our beautiful team</h2>
             <p class="section__h2__p section__h2__p--dark">We are a small team of designer and developers, who help brands big ideas.</p>
 
 
@@ -82,8 +89,8 @@
             </div>
             <h3 class="section__h3 section__h3--dark">Anne Hathaway</h3>
             <p class="section__h3__p section__h3__p--blue">CEO / Marketing Guru</p>
-            <p class="section__h3__p section__h3__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-            <div class="contact__container">
+            <p class="section__h3__p section__h3__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <div class="contact__container">  <!-- social media buttons -->
                 <a href="https://www.facebook.com/" target="_blank" class="contact__link" role="button" aria-pressed="true"><img src="images/fb_icon.png" alt="facebook icon" class="contact__link__img"></a>
                 <a href="https://twitter.com/" target="_blank" class="contact__link" role="button" aria-pressed="true"><img src="images/twitter_icon.png" alt="twitter icon" class="contact__link__img"></a>
                 <a href="https://pl.linkedin.com/" target="_blank" class="contact__link" role="button" aria-pressed="true"><img src="images/linkedin_icon.png" alt="LinkedIn logo" class="contact__link__img"></a>
@@ -96,8 +103,8 @@
             </div>
             <h3 class="section__h3 section__h3--dark">Kate Upton</h3>
             <p class="section__h3__p section__h3__p--blue">Creative Director</p>
-            <p class="section__h3__p section__h3__p--dark">Vero in fugit maiores, at eius rem repellendus ab odit excepturi recusandae nobis natus. </p>
-            <div class="contact__container">
+            <p class="section__h3__p section__h3__p--dark">Vero in fugit maiores, at eius rem repellendus ab odit excepturi recusandae nobis natus.</p>
+            <div class="contact__container"> <!-- social media buttons -->
                 <a href="https://twitter.com/" target="_blank" class="contact__link"><img src="images/twitter_icon.png" alt="twitter icon" class="contact__link__img"></a>
                 <a href="https://pl.linkedin.com/" target="_blank" class="contact__link"><img src="images/linkedin_icon.png" alt="LinkedIn logo" class="contact__link__img"></a>
                 <a href="mailto:email@email.com" class="contact__link"><img src="images/mail_icon.png" alt="email icon" class="contact__link__img"></a>
@@ -110,7 +117,7 @@
             <h3 class="section__h3 section__h3--dark">Olivia Wilde</h3>
             <p class="section__h3__p section__h3__p--blue">Lead Designer</p>
             <p class="section__h3__p section__h3__p--dark">Ipsam vitae velit labore qui autem et veniam, nemo error.</p>
-            <div class="contact__container">
+            <div class="contact__container"> <!-- social media buttons -->
                 <a href="https://www.facebook.com/" target="_blank" class="contact__link"><img src="images/fb_icon.png" alt="facebook icon" class="contact__link__img"></a>
                 <a href="https://twitter.com/" target="_blank" class="contact__link"><img src="images/twitter_icon.png" alt="twitter icon" class="contact__link__img"></a>
                 <a href="https://pl.linkedin.com/" target="_blank" class="contact__link"><img src="images/linkedin_icon.png" alt="LinkedIn logo" class="contact__link__img"></a>
@@ -124,7 +131,7 @@
             <h3 class="section__h3 section__h3--dark">Ashley Greene</h3>
             <p class="section__h3__p section__h3__p--blue">SEO / Developer</p>
             <p class="section__h3__p section__h3__p--dark">Amet dolore autem, magnam eligendi assumenda optio provident similique fugiat.</p>
-            <div class="contact__container">
+            <div class="contact__container"> <!-- social media buttons -->
                 <a href="https://www.facebook.com/" target="_blank" class="contact__link"><img src="images/fb_icon.png" alt="facebook icon" class="contact__link__img"></a>
                 <a href="https://twitter.com/" target="_blank" class="contact__link"><img src="images/twitter_icon.png" alt="twitter icon" class="contact__link__img"></a>
                 <a href="mailto:email@email.com" class="contact__link"><img src="images/mail_icon.png" alt="email icon" class="contact__link__img"></a>
@@ -135,6 +142,7 @@
 
         <!-- section we got skills-->
         <section class="section section--skills grid">
+		
             <h2 class="section__h2 section__h2--dark">We got skills</h2>
             <p class="section__h2__p section__h2__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, illo iusto esse soluta. </p>
 
@@ -149,14 +157,16 @@
                 <li class="section__h3 section__h3--dark"><span class="circle_skill circle_skill--graphic">70% </span>graphic design</li>
                 <li class="section__h3 section__h3--dark"><span class="circle_skill circle_skill--uiux">85% </span>ui/ux</li>
             </ul>
+			
         </section>
 
         <!-- section our portfolio-->
         <section id="work" class="section section--portfolio grid">
+		
             <h2 class="section__h2 section__h2--dark">our portfolio</h2>
             <p class="section__h2__p section__h2__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti eligendi enim cupiditate eos, sequi dolor quia placeat.</p>
 
-            <div class="btn__container">
+            <div class="btn__container">  <!-- show/hidden portfolio works buttons-->
                 <button class="btn btn--portfolio">all</button>
                 <button class="btn btn--portfolio">web</button>
                 <button class="btn btn--portfolio">apps</button>
@@ -194,10 +204,12 @@
 
 
             <button class="btn btn--more">load more projects</button>
+			
         </section>
 
         <!-- section what people say about us-->
         <section class="section section--testimonials grid">
+		
             <h2 class="section__h2 section__h2--light">what people say about us</h2>
             <p class="section__h2__p section__h2__p--light">Our clients love us!</p>
 
@@ -241,6 +253,7 @@
 
         <!-- section get in touch-->
         <section id="contact" class="section section--contact grid">
+		
             <h2 class="section__h2 section__h2--light">get in touch</h2>
             <address class="section__h2__p section__h2__p--light">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111</address>
 
@@ -259,19 +272,20 @@
             </form>
         </section>
 
-
     </main>
-
+	
+	
+	<!-- section footer -->
     <footer class="section section--footer grid">
         <ul>
 
-            <li><a href="" class="social_media_link">Facebook</a></li>
-            <li><a href="" class="social_media_link">Twitter</a></li>
-            <li><a href="" class="social_media_link">Google+</a></li>
-            <li><a href="" class="social_media_link">LinkedIn</a></li>
-            <li><a href="" class="social_media_link">Behance</a></li>
-            <li><a href="" class="social_media_link">Driblle</a></li>
-            <li><a href="" class="social_media_link">GitHub</a></li>
+            <li><a href="" class="footer__link">Facebook</a></li>
+            <li><a href="" class="footer__link">Twitter</a></li>
+            <li><a href="" class="footer__link">Google+</a></li>
+            <li><a href="" class="footer__link">LinkedIn</a></li>
+            <li><a href="" class="footer__link">Behance</a></li>
+            <li><a href="" class="footer__link">Driblle</a></li>
+            <li><a href="" class="footer__link">GitHub</a></li>
         </ul>
     </footer>
 
