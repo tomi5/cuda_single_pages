@@ -4,6 +4,12 @@
 	===========================
 */
 
+:root {
+    font-size: 16px;
+    line-height: 1;
+}
+
+
 * {
     text-decoration: none;
     -webkit-box-sizing: border-box;
@@ -18,8 +24,6 @@
 body {
     font-family: 'Titillium+Web', sans-serif;
     overflow-x: hidden;
-    font-size: 1rem;
-    line-height: 1;
     text-align: center;
 }
 
@@ -91,9 +95,10 @@ address {
 
 .section--header {
     min-height: 100vh;
-    padding: 1em 0;
-	position: relative;
-	z-index: 3;  /* button BACK TO TOP is not visible in header section */
+    padding: 1em 0 2em;
+    position: relative;
+    z-index: 3;
+    /* button BACK TO TOP is not visible in header section */
 }
 
 .logo {
@@ -111,11 +116,12 @@ address {
 .nav {
     width: 100%;
     height: 100%;
-	padding-top: 4em;
-	background-color: #864f9c;
-	position: absolute;
+    padding-top: 4em;
+    background-color: #864f9c;
+    position: absolute;
     top: 0;
-	visibility: hidden; /* not visable for mobie */
+    visibility: hidden;
+    /* not visable for mobie */
 }
 
 .nav__list {
@@ -126,7 +132,7 @@ address {
     display: inline-block;
     margin: .5em;
     padding: .5em 1em;
-	font-size: 1.1rem;
+    font-size: 1.1rem;
     line-height: 1.1;
     color: #ffffff;
     text-transform: uppercase;
@@ -135,19 +141,20 @@ address {
 .nav__list__item:hover,
 .nav__list__item:focus {
     padding: .5em 1em;
-	background-color: #643a79;
+    background-color: #643a79;
     border-radius: 4px;
 }
 
 .header__h1 {
     margin: 0 .8em;
-	font-size: 2rem;
+    font-size: 2rem;
     line-height: 1.7;
     color: #f7f3ea;
     font-weight: bold;
 }
 
-.br_for_mobile { /* break line in header__h1 for mobile */
+.br_for_mobile {
+    /* break line in header__h1 for mobile */
     display: inline;
 }
 
@@ -162,20 +169,20 @@ address {
 	 ============
 */
 
-
 .section__h2 {
     padding-bottom: 0;
-	font-size: 2rem;
+    font-size: 2rem;
     letter-spacing: .25rem;
     line-height: 1.2;
     text-transform: uppercase;
-    font-weight: bold;   
+    font-weight: bold;
 }
 
-.section__h2:after { /* line under sections header */
-	display: block;
+.section__h2:after {
+    /* line under sections header */
+    display: block;
     content: '';
-	width: 87px;
+    width: 87px;
     height: 4px;
     margin: 0.5em auto;
     background: #0003;
@@ -205,14 +212,16 @@ address {
 .section__h2--light,
 .section__h3--light,
 .section__h2__p--light,
-.section__h3__p--light { /* text color for dark background */
+.section__h3__p--light {
+    /* text color for dark background */
     color: #ffffff;
 }
 
 .section__h2--dark,
 .section__h3--dark,
 .section__h2__p--dark,
-.section__h3__p--dark { /* text color for light background */
+.section__h3__p--dark {
+    /* text color for light background */
     color: #3c4761;
 }
 
@@ -226,13 +235,16 @@ address {
 
 .section__h3__p--quote {
     margin: 0;
-    padding: 1em .5em;font-size: 1rem;
-	width: 60%; /* width set for flexbox*/
-    font-style: italic;    
-    text-align: right;    
+    padding: 1em .5em;
+    font-size: 1rem;
+    width: 60%;
+    /* width set for flexbox*/
+    font-style: italic;
+    text-align: right;
 }
 
 .section__h3__p--yellow {
+    width: 100%;
     font-size: 1.1rem;
     line-height: 1.6;
     color: #ffdd99;
@@ -240,8 +252,8 @@ address {
 
 .section__h3--customer {
     padding: 0;
-	width: 100%;
-    font-size: 1.3rem;    
+    width: 100%;
+    font-size: 1.3rem;
 }
 
 
@@ -257,7 +269,7 @@ address {
     padding: 1em 2em;
     width: 260px;
     border-radius: 4px;
-	border: none;
+    border: none;
     border-bottom: 4px solid rgba( 0, 0, 0, 0.2);
     color: #ffffff;
     font-weight: bold;
@@ -272,17 +284,18 @@ address {
 }
 
 .btn:active {
+    -webkit-transform: translateY(4px);
     transform: translateY(4px);
 }
 
- /* start setting of hamburger button
+/* start setting of hamburger button
 	visable only for mobile */
 
 .btn--hamburger {
-	display: inline-block;
-	margin: 0;
+    display: inline-block;
+    margin: 0;
     padding: 10px;
-	position: absolute;
+    position: absolute;
     top: 10%;
     right: 10%;
     width: auto;
@@ -290,15 +303,17 @@ address {
     background-color: inherit;
     border-radius: inherit;
     border: none;
-	font-size: 2rem;
+    font-size: 2rem;
     font-weight: bold;
-	text-align: center;
+    text-align: center;
     z-index: 9999;
-	transform: rotate(90deg); /* makes horizontal lines */
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    /* makes horizontal lines */
 }
 
 .toggle {
-  display: none; 
+    display: none;
 }
 
 .btn--hamburger:hover {
@@ -307,11 +322,12 @@ address {
 
 
 .btn--hamburger:active,
-.toggle:checked ~ .btn--hamburger { 
+.toggle:checked ~ .btn--hamburger {
     padding-right: 10px;
-	background-color: inherit;
-    letter-spacing: 0.1em; 
+    background-color: inherit;
+    letter-spacing: 0.1em;
     font-size: 1.8rem;
+    -webkit-transform: rotate(180deg) translateY(0px);
     transform: rotate(180deg) translateY(0px);
 }
 
@@ -319,13 +335,14 @@ address {
     position: absolute;
     top: 0;
     left: 2em;
-	width: 20%;
-    height: auto;    
-    z-index: 99999;    
-} 
+    width: 20%;
+    height: auto;
+    z-index: 99999;
+}
 
-.toggle:checked ~ .nav { /* shov nav if hamburger toogle is checkek */
-  visibility: visible;
+.toggle:checked ~ .nav {
+    /* shov nav if hamburger toogle is checkek */
+    visibility: visible;
 }
 
 /* end setting of hamburger button */
@@ -335,8 +352,8 @@ address {
 }
 
 .btn__container {
-	margin: 0 auto;
-    width: 80%;   
+    margin: 0 auto;
+    width: 80%;
 }
 
 .btn--portfolio {
@@ -359,38 +376,175 @@ address {
 }
 
 .btn--send_msg {
-    background-color: #30bae7;	
+    background-color: #30bae7;
 }
 
 /* start setting of BACK TO TOP button */
+
 .btn--back {
-	display: inline-block;
-	margin: 0;
+    display: inline-block;
+    margin: 0;
     padding: 0;
-	position: fixed;
+    position: fixed;
     bottom: 5%;
     right: 5%;
     width: 32px;
     height: 32px;
     background-color: #864f9c;
-    border: none;   
+    border: none;
     border-radius: 50%;
-	opacity: 0.3;
-    z-index: 2;	/* makes it always on top, except header section */	
+    opacity: 0.3;
+    z-index: 2;
+    /* makes it always on top, except header section */
 }
 
 .btn--back__img {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
 
-.btn--back:hover{
-	background-color: #864f9c;
-	transform: scale(1.5);
-	opacity: 1;
+.btn--back:hover {
+    background-color: #864f9c;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 1;
 }
 
 /* end setting of BACK TO TOP button */
+
+
+/*
+    ============
+    percentage circles in skills section
+    ============
+*/
+
+.skill__container {
+    margin: 0 auto;
+    padding-top: 4em;
+}
+
+.circle {
+    width: 1em;
+    /* dlugosc odpowiada 1x font-size w circle w tym wypadku 7,5rem=120px */
+    height: 1em;
+    font-size: 10rem;
+    border: none;
+    border-radius: 50%
+}
+
+.circle--basis {
+    position: relative;
+    margin: 0 auto .2em;
+    background-color: #dfe8ed;
+    z-index: 1;
+}
+
+.circle--skill {
+    position: absolute;
+    clip: rect(0 .5em 1em 0);
+    /*przycięcie do lewej połowy koła) */
+    z-index: 2;
+}
+
+.circle--fill {
+    position: absolute;
+    clip: rect(0 .5em 1em 0);
+    z-index: 3;
+
+}
+
+.circle:after {
+    content: " ";
+    display: block;
+    width: .85em;
+    height: .85em;
+    position: absolute;
+    top: .075em;
+    left: .075em;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.circle:hover > .percentage{
+    transform: scale(1.1);   
+}
+
+.circle:hover::after {
+    width: .95em;
+    height: .95em;
+    top: 0.025em;
+    left: 0.025em;
+
+
+}
+
+.percentage {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: .31em;
+    line-height: 3.2em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #3c4761;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 6;
+}
+
+
+.fill--upto50 {
+    background-color: #dfe8ed;
+}
+
+
+.fill--over50 {
+    transform: rotate(180deg);
+}
+
+/* set a color of skill circle */
+
+.circle--blue {
+    background-color: #30bae7;
+}
+
+.circle--purple {
+    background-color: #d74680;
+}
+
+.circle--green {
+    background-color: #15c7a8;
+}
+
+.circle--orange {
+    background-color: #eb7d4b;
+}
+
+
+/* Setting of correct skill % value on circle.
+   Set the first value in the calc function the same as the value given in the class name!
+*/
+
+.skill--p90 {
+    transform: rotate( calc(90 * 360deg / 100));
+}
+
+.skill--p75 {
+    transform: rotate( calc(75 * 360deg / 100));
+}
+
+.skill--p70 {
+    transform: rotate( calc(70 * 360deg / 100));
+}
+
+.skill--p85 {
+    transform: rotate( calc(85 * 360deg / 100));
+}
+
 
 
 /*
@@ -402,14 +556,14 @@ address {
 .services__icon {
     margin: 0 auto;
     padding: 2em 0 1em;
-	width: 30%;
+    width: 30%;
     max-width: 170px;
-    height: auto;    
+    height: auto;
 }
 
 .photo__cropper {
-	margin: 2em auto 1em;
-	width: 200px;
+    margin: 2em auto 1em;
+    width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
@@ -417,8 +571,8 @@ address {
 
 .photo__cropper--small {
     margin: 0;
-	width: 96px;
-    height: 96px;    
+    width: 96px;
+    height: 96px;
 }
 
 .photo {
@@ -431,18 +585,20 @@ address {
 .portfolio__img {
     margin: 2.5em auto 0;
     padding: 0 0 1em;
-	width: 80%;
+    width: 80%;
     max-width: 540px;
-    height: auto;    
+    height: auto;
 }
 
 .portfolio__img:hover,
 .portfolio__img:focus {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
 
-.contact__container { /*employer's social media container */
+.contact__container {
+    /*employer's social media container */
     display: inline-block;
     width: 70%;
 }
@@ -450,8 +606,8 @@ address {
 .contact__link {
     display: inline-block;
     margin: 0 .5em;
-	width: 20%;
-    max-width: 32px;    
+    width: 20%;
+    max-width: 32px;
 }
 
 .contact__link__img {
@@ -462,14 +618,22 @@ address {
 
 .contact__link__img:hover,
 .contact__link__img:focus {
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
 }
 
 .testimonials__conteiner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-	margin-top: 2em;   
+    margin-top: 2em;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -483,18 +647,18 @@ address {
 .form__input,
 .form__textarea {
     display: block;
-	margin: 1em auto;
+    margin: 1em auto;
     padding: .5em;
     width: 70%;
-    max-width: 90%;       
+    max-width: 90%;
     border: none;
     border-radius: 4px;
     background-color: #273a71;
-	font-family: inherit;
-    font-size: 1.125rem;	
+    font-family: inherit;
+    font-size: 1.125rem;
     line-height: 1.1;
-	color: #ffffff;
-    text-align: left;    
+    color: #ffffff;
+    text-align: left;
 }
 
 .form__textarea {
@@ -506,7 +670,7 @@ address {
 .form__input::-webkit-input-placeholder,
 .form__textarea::-webkit-input-placeholder {
     font-family: inherit;
-	font-size: 1rem;
+    font-size: 1rem;
     line-height: 1.1;
     color: #ffffff;
 }
@@ -515,15 +679,15 @@ address {
 .form__input:-ms-input-placeholder,
 .form__textarea:-ms-input-placeholder {
     font-family: inherit;
-	font-size: 1rem;
+    font-size: 1rem;
     line-height: 1.1;
     color: #ffffff;
 }
 
 .form__input::placeholder,
 .form__textarea::placeholder {
-	font-family: inherit;
-	font-size: 1rem;
+    font-family: inherit;
+    font-size: 1rem;
     line-height: 1.1;
     color: #ffffff;
 }
@@ -555,7 +719,3 @@ address {
 .footer__link:focus {
     color: #30bae7;
 }
-
-
-
-
