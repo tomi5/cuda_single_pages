@@ -412,7 +412,6 @@ address {
 
 /* end setting of BACK TO TOP button */
 
-
 /*
     ============
     percentage circles in skills section
@@ -467,8 +466,8 @@ address {
     z-index: 5;
 }
 
-.circle:hover > .percentage{
-    transform: scale(1.1);   
+.circle:hover > .percentage {
+    transform: scale(1.1);
 }
 
 .circle:hover::after {
@@ -562,7 +561,7 @@ address {
 }
 
 .photo__cropper {
-    margin: 2em auto 1em;
+    margin: 1em auto 0;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -610,14 +609,14 @@ address {
     max-width: 32px;
 }
 
-.contact__link__img {
+.social__icon {
     width: 100%;
     max-width: 32px;
     height: auto;
 }
 
-.contact__link__img:hover,
-.contact__link__img:focus {
+.social__icon:hover,
+.social__icon:focus {
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
 }
@@ -719,3 +718,144 @@ address {
 .footer__link:focus {
     color: #30bae7;
 }
+
+/*
+    ============
+    MEDIA QUERIES
+    ============
+*/
+
+@media only screen and (min-width: 800px) {
+
+    /* set a grid for all section */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(4, 260px) 1fr;
+        column-gap: 20px;
+        justify-items: center;
+        align-items: center;
+        padding: 7.5em 0;
+        grid-template-areas: ". header header header header ." ". . h2 h2 . ." ". box1 box2 box3 box4 .";
+
+    }
+
+    .grid--portfolio {
+        grid-template-areas: ". header header header header ." ". . h2 h2 . ." ". . btn btn . ." ". box1 box1 box2 box2 ." ". box3 box3 box4 box4 ." ". . more more . .";
+    }
+
+    .grid--testimonials {
+        grid-template-areas: ". header header header header ." ". . h2 h2 . ." ". box1 box1 box2 box2 ." ". box3 box3 box4 box4 .";
+    }
+
+    .grid--contact {
+        grid-template-areas: ". header header header header ." ". h2 h2 h2 h2 ." " . form form form form ." " . form form form form ." " . . btn btn . .";
+    }
+
+    .container--a {
+        grid-area: box1;
+    }
+
+    .container--b {
+        grid-area: box2;
+
+    }
+
+    .container--c {
+        grid-area: box3;
+    }
+
+    .container--d {
+        grid-area: box4;
+    }
+
+    .form {
+        grid-area: form;
+    }
+
+
+
+    .section__h2 {
+        font-size: 2.5rem;
+        line-height: 1.875rem;
+        grid-area: header;
+    }
+
+    .section__h2__p {
+        margin: 0 -40px;
+        padding-bottom: 3em;
+        grid-area: h2;
+    }
+
+    .section__h3 {
+        padding: 2rem 0 1rem;
+        margin: 0;
+        line-height: 1.123rem;
+    }
+
+    .section__h3__p--dark {
+        text-align: justify;
+        min-height: 100px;
+    }
+
+    .services__icon {
+        width: 100%;
+        padding: 0;
+    }
+
+    .btn__container,
+    .btn--send_msg {
+        grid-area: btn;
+        margin-top: -1.5em;
+        margin-bottom: 4em;
+    }
+
+    .btn--more {
+        grid-area: more;
+    }
+
+    .btn--portfolio {
+        margin: 0 .2em;
+    }
+
+    .portfolio__img {
+        width: 100%;
+        margin: 0;
+    }
+
+
+
+    .circle--basis {
+        margin: 0 auto;
+    }
+
+    .skill__container {
+        padding-top: 1.6em;
+    }
+
+    .contact__container {
+        width: 100%;
+    }
+
+    .section__h3__p--quote {
+        text-align: left;
+        font-size: 1.3rem;
+        margin-right: 4rem;
+    }
+    .section__h3--customer,
+    .section__h3__p--yellow {
+        padding: 0;
+    }
+
+    .testimonials__conteiner {
+        justify-content: space-between;
+        margin: 0;
+    }
+
+
+    .testimonials__conteiner:nth-child(n+5) {
+        margin: 5rem 0 0 0;
+    }
+    
+    .section--footer {
+        display: inline-block;
+    }
