@@ -12,9 +12,9 @@
 
 <body>
 
-    <header id="home" class="section section--header grid">
+    <header id="home" class="section section--header grid grid--header">
 
-        <input type="checkbox" id="toggle" name="toggle" class="toggle">
+        <input type="checkbox" id="toggle" name="toggle" class="toggle" >
         <!-- toggle for hamburger button -->
         <label for="toggle" class="btn btn--hamburger">|||</label>
         <!-- humburger button - visible only on mobile -->
@@ -36,7 +36,7 @@
             </ul>
         </nav>
 
-        <h1 class="header__h1">Hi there! <span class="br_for_mobile"> We are the new kids on the block and we build awesome website and mobile apps.</span></h1>
+        <h1 class="header__h1">Hi there! <span class="br br--mobile"> We are the new kids on the block <span class="br br--desktop"> and we build awesome website and mobile apps.</span></h1>
         <!-- span - break a line for mobile -->
 
         <a href="#contact" class="btn btn--header" role="button" aria-pressed="true">work with us!</a>
@@ -59,28 +59,28 @@
         <section id="about" class="section section--services grid">
 
             <h2 class="section__h2 section__h2--light">services we provide</h2>
-            <p class="section__h2__p section__h2__p--light">We are working with both individuals and businesses from all over the globe to create awesome websites and aplications</p>
+            <p class="section__p section__p--light">We are working with both individuals and businesses from all over the globe to create awesome websites and aplications</p>
 
 
-            <div class="container container--a">
+            <div class="grid__box grid__box--a">
                 <img src="images/flag_icon.png" alt="icon of flag" class="services__icon">
                 <h3 class="section__h3 section__h3--light">Branding</h3>
                 <p class="section__h3__p section__h3__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
             </div>
 
-            <div class="container container--b">
+            <div class="grid__box grid__box--b">
                 <img src="images/pen_icon.png" alt="icon of pen" class="services__icon">
                 <h3 class="section__h3 section__h3--light">Designed</h3>
                 <p class="section__h3__p section__h3__p--light">Vero in fugit maiores, at eius rem repellendus ab odit excepturi recusandae nobis natus. </p>
 
             </div>
-            <div class="container container--c">
+            <div class="grid__box grid__box--c">
                 <img src="images/gears_icon.png" alt="icon of gears" class="services__icon">
                 <h3 class="section__h3 section__h3--light">Development</h3>
                 <p class="section__h3__p section__h3__p--light">Ipsam vitae velit labore qui autem et veniam, nemo error.</p>
             </div>
 
-            <div class="container container--d">
+            <div class="grid__box grid__box--d">
                 <img src="images/rocket_icon.png" alt="icon of rocket" class="services__icon">
                 <h3 class="section__h3 section__h3--light">Rocket Science</h3>
                 <p class="section__h3__p section__h3__p--light">Amet dolore autem, magnam eligendi assumenda optio provident similique fugiat.</p>
@@ -91,9 +91,9 @@
         <section class="section section--team grid">
 
             <h2 class="section__h2 section__h2--dark">Meet our beautiful team</h2>
-            <p class="section__h2__p section__h2__p--dark">We are a small team of designer and developers, who help brands big ideas.</p>
+            <p class="section__p section__p--dark">We are a small team of designer and developers, who help brands big ideas.</p>
 
-            <div class="container container--a">
+            <div class="grid__box grid__box--a">
                 <div class="photo__cropper">
                     <img src="images/employer_photo_Anne_Hathaway.png" alt="photo of employer" class="photo">
                 </div>
@@ -109,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="container container--b">
+            <div class="grid__box grid__box--b">
                 <div class="photo__cropper">
                     <img src="images/employer_photo_Kate_Upton.png" alt="photo of employer" class="photo">
                 </div>
@@ -124,7 +124,7 @@
                 </div>
             </div>
 
-            <div class="container container--c">
+            <div class="grid__box grid__box--c">
                 <div class="photo__cropper">
                     <img src="images/emloyer_photo_Olivia_Wilde.png" alt="photo of employer" class="photo">
                 </div>
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="container container--d">
+            <div class="grid__box grid__box--d">
                 <div class="photo__cropper">
                     <img src="images/emloyer_photo_Ashley_Greene.png" alt="photo of employer" class="photo">
                 </div>
@@ -162,9 +162,9 @@
         <section class="section section--skills grid">
 
             <h2 class="section__h2 section__h2--dark">We got skills</h2>
-            <p class="section__h2__p section__h2__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, illo iusto esse soluta. </p>
+            <p class="section__p section__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, illo iusto esse soluta. </p>
 
-            <div class="skill__container container container--a">
+            <div class="skill__container grid__box grid__box--a">
                 <div class="circle circle--basis">
                     <span class="percentage">90%</span>
                     <div class="circle circle--skill skill--p90 circle--blue"></div>
@@ -175,7 +175,7 @@
                 <h3 class="section__h3 section__h3--dark">web design</h3>
             </div>
 
-            <div class="skill__container container container--b">
+            <div class="skill__container grid__box grid__box--b">
                 <div class="circle circle--basis">
                     <span class="percentage">75%</span>
                     <div class="circle circle--skill skill--p75 circle--purple"></div>
@@ -186,7 +186,7 @@
                 <h3 class="section__h3 section__h3--dark">html/css</h3>
             </div>
 
-            <div class="skill__container container container--c">
+            <div class="skill__container grid__box grid__box--c">
                 <div class="circle circle--basis">
                     <span class="percentage">70%</span>
                     <div class="circle circle--skill skill--p70 circle--green"></div>
@@ -197,7 +197,7 @@
                 <h3 class="section__h3 section__h3--dark">graphic design</h3>
             </div>
 
-            <div class="skill__container container container--d">
+            <div class="skill__container grid__box grid__box--d">
                 <div class="circle circle--basis">
                     <span class="percentage">85%</span>
                     <div class="circle circle--skill skill--p85 circle--orange"></div>
@@ -215,7 +215,7 @@
         <section id="work" class="section section--portfolio grid grid--portfolio">
 
             <h2 class="section__h2 section__h2--dark">our portfolio</h2>
-            <p class="section__h2__p section__h2__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti eligendi enim cupiditate eos, sequi dolor quia placeat.</p>
+            <p class="section__p section__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti eligendi enim cupiditate eos, sequi dolor quia placeat.</p>
 
             <div class="btn__container">
                 <!-- show/hidden portfolio works buttons-->
@@ -226,32 +226,32 @@
             </div>
 
 
-            <figure class="container--a">
+            <figure class="grid__box--a">
                 <a href="">
                     <img src="images/isometric_mockup.png" alt="photo of isometric perspective mock up" class="portfolio__img">
                 </a>
-                <figcaption class="section__h2__p section__h2__p--dark section__h2__p--uppercase">isometric perspective mock-up</figcaption>
+                <figcaption class="section__p section__p--dark section__p--uppercase">isometric perspective mock-up</figcaption>
             </figure>
 
-            <figure class="container--b">
+            <figure class="grid__box--b">
                 <a href="">
                     <img src="images/timezone.png" alt="photo of time zone app ui" class="portfolio__img">
                 </a>
-                <figcaption class="section__h2__p section__h2__p--dark section__h2__p--uppercase">time zone app ui</figcaption>
+                <figcaption class="section__p section__p--dark section__p--uppercase">time zone app ui</figcaption>
             </figure>
 
-            <figure class="container--c">
+            <figure class="grid__box--c">
                 <a href="">
                     <img src="images/viromedia.png" alt="photo of viro media players ui" class="portfolio__img">
                 </a>
-                <figcaption class="section__h2__p section__h2__p--dark section__h2__p--uppercase">viro media players ui</figcaption>
+                <figcaption class="section__p section__p--dark section__p--uppercase">viro media players ui</figcaption>
             </figure>
 
-            <figure class="container--d">
+            <figure class="grid__box--d">
                 <a href="">
                     <img src="images/blog.png" alt="photo of blog/magazine flat UI KIT" class="portfolio__img">
                 </a>
-                <figcaption class="section__h2__p section__h2__p--dark section__h2__p--uppercase">blog / magazine flat ui kit</figcaption>
+                <figcaption class="section__p section__p--dark section__p--uppercase">blog / magazine flat ui kit</figcaption>
             </figure>
 
 
@@ -263,9 +263,9 @@
         <section class="section section--testimonials grid grid--testimonials">
 
             <h2 class="section__h2 section__h2--light">what people say about us</h2>
-            <p class="section__h2__p section__h2__p--light">Our clients love us!</p>
+            <p class="section__p section__p--light">Our clients love us!</p>
 
-            <div class="testimonials__conteiner container--a">
+            <div class="testimonials__conteiner grid__box--a">
                 <div class="photo__cropper photo__cropper--small">
                     <img src="images/customer_photo_Chanel_Iman.png" alt="customer's photo" class="photo">
                 </div>
@@ -274,7 +274,7 @@
                 <p class="section__h3__p section__h3__p--yellow">CEO of Pinterest</p>
             </div>
 
-            <div class="testimonials__conteiner container--b">
+            <div class="testimonials__conteiner grid__box--b">
                 <div class="photo__cropper photo__cropper--small">
                     <img src="images/customer_photo_adrianna_lima.png" alt="customer's photo" class="photo">
                 </div>
@@ -283,7 +283,7 @@
                 <p class="section__h3__p section__h3__p--yellow">Founder of Instagram</p>
             </div>
 
-            <div class="testimonials__conteiner container--c">
+            <div class="testimonials__conteiner grid__box--c">
                 <div class="photo__cropper photo__cropper--small">
                     <img src="images/customer_photo_anne_hathaway.png" alt="customer's photo" class="photo">
                 </div>
@@ -292,7 +292,7 @@
                 <p class="section__h3__p section__h3__p--yellow">Lead Designer at Behance</p>
             </div>
 
-            <div class="testimonials__conteiner container--d">
+            <div class="testimonials__conteiner grid__box--d">
                 <div class="photo__cropper photo__cropper--small">
                     <img src="images/customer_photo_emma_stone.png" alt="customer's photo" class="photo">
                 </div>
@@ -307,19 +307,19 @@
         <section id="contact" class="section section--contact grid grid--contact">
 
             <h2 class="section__h2 section__h2--light">get in touch</h2>
-            <address class="section__h2__p section__h2__p--light">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111</address>
+            <address class="section__p section__p--light">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111</address>
 
-            <form class="form" action="#" method="post">
+            <form class="form grid grid--form" action="#" method="post">
                 <label class="form__label" for="name"></label>
-                <input class="form__input" type="text" id="name" name="name" placeholder="Your Name*" required>
+                <input class="form__input form__input--name" type="text" id="name" name="name" placeholder="Your Name*" required>
 
                 <label class="form__label" for="email"></label>
-                <input class="form__input" type="email" id="email" name="name" placeholder="Your Email*" required>
+                <input class="form__input form__input--email" type="email" id="email" name="name" placeholder="Your Email*" required>
 
                 <label class="form__label" for="message"></label>
                 <textarea class="form__textarea" name="message" id="message" placeholder="Your Message*"></textarea>
 
-                <button class="btn btn--send_msg" type="submit">send message</button>
+                <button class="btn btn--send" type="submit">send message</button>
 
             </form>
         </section>
@@ -328,8 +328,8 @@
 
 
     <!-- section footer -->
-    <footer class="section section--footer grid">
-        <ul>
+    <footer class="section section--footer grid grid--footer">
+        <ul class="footer__container">
 
             <li><a href="" class="footer__link">Facebook</a></li>
             <li><a href="" class="footer__link">Twitter</a></li>

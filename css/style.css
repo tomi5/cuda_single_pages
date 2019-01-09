@@ -4,10 +4,7 @@
 	===========================
 */
 
-:root {
-    font-size: 16px;
-    line-height: 1;
-}
+
 
 
 * {
@@ -20,6 +17,11 @@
     outline: none;
 }
 
+html {
+    font-size: 16px;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Titillium+Web', sans-serif;
@@ -153,12 +155,12 @@ address {
     font-weight: bold;
 }
 
-.br_for_mobile {
+.br {
     /* break line in header__h1 for mobile */
     display: inline;
 }
 
-.br_for_mobile:before {
+.br--mobile:before {
     content: "\a ";
     white-space: pre;
 }
@@ -197,7 +199,7 @@ address {
 }
 
 
-.section__h2__p {
+.section__p {
     font-size: 1.125rem;
     letter-spacing: 0rem;
     line-height: 1.6;
@@ -211,7 +213,7 @@ address {
 
 .section__h2--light,
 .section__h3--light,
-.section__h2__p--light,
+.section__p--light,
 .section__h3__p--light {
     /* text color for dark background */
     color: #ffffff;
@@ -219,13 +221,13 @@ address {
 
 .section__h2--dark,
 .section__h3--dark,
-.section__h2__p--dark,
+.section__p--dark,
 .section__h3__p--dark {
     /* text color for light background */
     color: #3c4761;
 }
 
-.section__h2__p--uppercase {
+.section__p--uppercase {
     text-transform: uppercase;
 }
 
@@ -289,7 +291,7 @@ address {
 }
 
 /* start setting of hamburger button
-	visable only for mobile */
+ * visable only for mobile */
 
 .btn--hamburger {
     display: inline-block;
@@ -309,7 +311,6 @@ address {
     z-index: 9999;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
-    /* makes horizontal lines */
 }
 
 .toggle {
@@ -341,7 +342,7 @@ address {
 }
 
 .toggle:checked ~ .nav {
-    /* shov nav if hamburger toogle is checkek */
+    /* show nav if hamburger toogle is checkek */
     visibility: visible;
 }
 
@@ -375,7 +376,7 @@ address {
     background-color: #17c2a4;
 }
 
-.btn--send_msg {
+.btn--send {
     background-color: #30bae7;
 }
 
@@ -425,11 +426,10 @@ address {
 
 .circle {
     width: 1em;
-    /* dlugosc odpowiada 1x font-size w circle w tym wypadku 7,5rem=120px */
     height: 1em;
     font-size: 10rem;
     border: none;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .circle--basis {
@@ -442,7 +442,7 @@ address {
 .circle--skill {
     position: absolute;
     clip: rect(0 .5em 1em 0);
-    /*przycięcie do lewej połowy koła) */
+    /*left half of circle is visible) */
     z-index: 2;
 }
 
@@ -525,7 +525,7 @@ address {
 
 
 /* Setting of correct skill % value on circle.
-   Set the first value in the calc function the same as the value given in the class name!
+ * Set the first value in the calc function the same as the value given in the class name!
 */
 
 .skill--p90 {
@@ -591,8 +591,8 @@ address {
 
 .portfolio__img:hover,
 .portfolio__img:focus {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 
@@ -664,6 +664,7 @@ address {
     margin-top: 2em;
     width: 90%;
     min-height: 7em;
+    resize: none;
 }
 
 .form__input::-webkit-input-placeholder,
@@ -689,6 +690,10 @@ address {
     font-size: 1rem;
     line-height: 1.1;
     color: #ffffff;
+}
+
+.form__label {
+    display: none;
 }
 
 /*
@@ -727,18 +732,82 @@ address {
 
 @media only screen and (min-width: 800px) {
 
+    /* hide a hamburger button  */
+    .toggle,
+    .btn--hamburger {
+        display: none;
+    }
+
+    /* set a break word in header */
+    .br--mobile:before {
+        display: none;
+    }
+
+    .br--desktop:before {
+        content: "\a ";
+        white-space: pre;
+    }
+
+
     /* set a grid for all section */
     .grid {
         display: grid;
         grid-template-columns: 1fr repeat(4, 260px) 1fr;
         column-gap: 20px;
         justify-items: center;
-        align-items: center;
         padding: 7.5em 0;
         grid-template-areas: ". header header header header ." ". . h2 h2 . ." ". box1 box2 box3 box4 .";
 
     }
+    
+    /* modification for header section*/
+    .grid--header {
+        grid-template-areas: ". logo . nav nav ." ". h1 h1 h1 h1 ." ". . btn btn . .";
+        align-items: center;
+        padding: 3.5rem 0 9rem;
+        min-height: auto;
+    }
 
+    .logo {
+        grid-area: logo;
+        width: 50%;
+        justify-self: start;
+        margin: 0;
+    }
+    
+    /* nav bar always visible on desktop*/
+    .nav {
+        grid-area: nav;
+        visibility: visible;
+        position: relative;
+        padding-top: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0;
+    }
+    
+    .nav__list__item {
+        font-size: 1rem;
+    }
+
+    .header__h1 {
+        grid-area: h1;
+        font-size: 2.625rem;
+        line-height: 1.2;
+        padding: 3em 0 1.2em;
+    }
+
+    .btn--header {
+        grid-area: btn;
+        line-height: 2.2;
+    }
+
+    /* modification for portfolio section */
     .grid--portfolio {
         grid-template-areas: ". header header header header ." ". . h2 h2 . ." ". . btn btn . ." ". box1 box1 box2 box2 ." ". box3 box3 box4 box4 ." ". . more more . .";
     }
@@ -748,28 +817,60 @@ address {
     }
 
     .grid--contact {
-        grid-template-areas: ". header header header header ." ". h2 h2 h2 h2 ." " . form form form form ." " . form form form form ." " . . btn btn . .";
+        grid-template-areas: ". header header header header ." ". h2 h2 h2 h2 ." " . form form form form ."
     }
 
-    .container--a {
+    .grid--footer {
+        grid-template-areas: ". link link link link .";
+        padding: 1em 0;
+    }
+
+    .grid__box--a {
         grid-area: box1;
     }
 
-    .container--b {
+    .grid__box--b {
         grid-area: box2;
-
     }
 
-    .container--c {
+    .grid__box--c {
         grid-area: box3;
     }
 
-    .container--d {
+    .grid__box--d {
         grid-area: box4;
     }
 
-    .form {
+    .grid--form {
         grid-area: form;
+        display: flex;
+        flex-flow: row wrap;
+        width: 80%;
+        padding: 0;
+        justify-content: space-between;
+
+
+    }
+
+    .form__input {
+        flex-basis: 48%;
+        margin: auto 0;
+        height: 3em;
+        padding: 1.1em 1.4em;
+    }
+
+    .form__textarea {
+        flex-basis: 100%;
+        max-width: 100%;
+        padding: 1.1em 1.4em;
+        min-height: 11em;
+        margin: 1.5em 0 3.5em;
+    }
+
+    .btn--send {
+        position: relative;
+        left: 50%;
+        transform: translatex(-50%);
     }
 
 
@@ -778,9 +879,10 @@ address {
         font-size: 2.5rem;
         line-height: 1.875rem;
         grid-area: header;
+        margin: 0;
     }
 
-    .section__h2__p {
+    .section__p {
         margin: 0 -40px;
         padding-bottom: 3em;
         grid-area: h2;
@@ -802,8 +904,15 @@ address {
         padding: 0;
     }
 
-    .btn__container,
-    .btn--send_msg {
+    .btn--header,
+    .btn--more,
+    .btn--send {
+        width: 293px;
+        height: 70px;
+        margin: 0;
+    }
+
+    .btn__container {
         grid-area: btn;
         margin-top: -1.5em;
         margin-bottom: 4em;
@@ -855,7 +964,17 @@ address {
     .testimonials__conteiner:nth-child(n+5) {
         margin: 5rem 0 0 0;
     }
-    
-    .section--footer {
-        display: inline-block;
+
+    .footer__container {
+        grid-area: link;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        width: 100%;
+
     }
+
+    .footer__link {
+        font-size: 1.5rem;
+    }
+    
