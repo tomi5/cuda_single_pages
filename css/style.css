@@ -561,7 +561,7 @@ address {
 }
 
 .photo__cropper {
-    margin: 1em auto 0;
+    margin: 1em auto 0.5em;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -977,4 +977,8 @@ address {
     .footer__link {
         font-size: 1.5rem;
     }
+
+.btn--send:active {
+	transform: translate(-50%, 4px);
+}
     
