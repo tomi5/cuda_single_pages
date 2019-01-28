@@ -133,7 +133,7 @@ address {
     height: 100%;
     padding-top: 4em;
     background-color: #864f9c;
-    position: absolute;
+    position: fixed;
     top: 0;
     visibility: hidden;
     /* not visable for mobie */
@@ -310,12 +310,12 @@ address {
     display: inline-block;
     margin: 0;
     padding: 10px;
-    position: absolute;
-    top: 10%;
-    right: 10%;
+    position: fixed;
+    top: 5%;
+    right: 2%;
     width: auto;
     height: auto;
-    background-color: inherit;
+    background-color: none;
     border-radius: inherit;
     border: none;
     font-size: 2rem;
@@ -324,6 +324,7 @@ address {
     z-index: 9999;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
+
 }
 
 .toggle {
@@ -331,13 +332,13 @@ address {
 }
 
 .btn--hamburger:hover {
-    background-color: inherit;
+    background-color: none;
 }
 
 .btn--hamburger:active,
 .toggle:checked ~ .btn--hamburger {
     padding-right: 10px;
-    background-color: inherit;
+background-color: none;
     letter-spacing: 0.1em;
     font-size: 1.8rem;
     -webkit-transform: rotate(180deg) translateY(0px);
@@ -346,7 +347,7 @@ address {
 
 /* change a logo possition when menu shown */
 .toggle:checked ~ .logo { 
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 2em;
     width: 20%;
