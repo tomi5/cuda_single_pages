@@ -5,319 +5,373 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuda single page - portfolio</title>
-    <link href="hhttp://www.google.com/fonts/specimen/Titillium+Web" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css\normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,700,700i" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="css\style.css" title="style" />
 </head>
 
+
 <body>
 
-    <header id="home" class="section section--header grid grid--header">
 
-        <input type="checkbox" id="toggle" name="toggle" class="toggle" >
-        <!-- toggle for hamburger button -->
-        <label for="toggle" class="btn btn--hamburger">|||</label>
-        <!-- humburger button - visible only on mobile -->
+    <header id="home" class="section section--header flex">
 
-        <a href="#home" class="logo">
-            <img src="images/cuda_logo.png" alt="logo of company" class="logo__img">
-        </a>
+        <div class="nav__container flex">
+            <a href="#home" class="logo__container">
+                    <img src="images/cuda_logo.png" alt="Cuda company logo" class="logo__img">
+            </a>
 
+            <button class="burger" type="button">
+                <span class="burger__bar burger__bar--bar1"></span>
+                <span class="burger__bar burger__bar--bar2"></span>
+                <span class="burger__bar burger__bar--bar3"></span>
+            </button>
 
-        <nav class="nav">
-            <!-- hidden for mobile, press humburger button to appear -->
+            <nav class="nav">
+                <ul class="nav__list flex">
+                    <li class="nav__list__item"><a href="#home" class="nav__list__link">home</a></li>
+                    <li class="nav__list__item"><a href="#about" class="nav__list__link">about</a></li>
+                    <li class="nav__list__item"><a href="#work" class="nav__list__link">work</a></li>
+                    <li class="nav__list__item"><a href="#blog" class="nav__list__link">blog</a></li>
+                    <li class="nav__list__item"><a href="#contact" class="nav__list__link">contact</a></li>
+                </ul>
+            </nav>
+        </div>
 
-            <ul class="nav__list">
-                <li><a href="#home" class="nav__list__item">home</a></li>
-                <li><a href="#about" class="nav__list__item">about</a></li>
-                <li><a href="#work" class="nav__list__item">work</a></li>
-                <li><a href="#blog" class="nav__list__item">blog</a></li>
-                <li><a href="#contact" class="nav__list__item">contact</a></li>
-            </ul>
-        </nav>
-
-        <h1 class="header__h1">Hi there! <span class="br br--mobile"> We are the new kids on the block <span class="br br--desktop"> and we build awesome website and mobile apps.</span></h1>
-        <!-- span - break a line for mobile -->
+        <h1 class="header__h1">Hi there! <span class="br br--mobile"> We are the new kids on the block <span class="br br--desktop">
+                    and we build awesome website and mobile apps.</span></h1>
 
         <a href="#contact" class="btn btn--header" role="button" aria-pressed="true">work with us!</a>
-        <!-- header button -->
-
 
     </header>
 
-
     <main>
 
+        <section id="about" class="section section--services section--whiteFont flex">
 
-        <a href="#" class="btn btn--back">
-            <!-- back to the top button -->
-            <img src="css/img/arrow_icon.png" alt="facebook icon" class="btn--back__img">
-        </a>
+            <h2 class="section__title">services we provide</h2>
+            <p class="section__descr">We are working with both individuals and businesses
+                from all over the globe to create awesome websites and aplications</p>
 
+            <div class="section__main flex">
 
-        <!-- section services we provide -->
-        <section id="about" class="section section--services grid">
+                <div class="main__box flex">
+                    <img src="images/flag_icon.png" alt="" class="main__icon">
+                    <h3 class="main__title">Branding</h3>
+                    <p class="main__descr">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. </p>
+                </div>
 
-            <h2 class="section__h2 section__h2--light">services we provide</h2>
-            <p class="section__p section__p--light">We are working with both individuals and businesses from all over the globe to create awesome websites and aplications</p>
+                <div class="main__box flex">
+                    <img src="images/pen_icon.png" alt="" class="main__icon">
+                    <h3 class="main__title">Designed</h3>
+                    <p class="main__descr">Vero in fugit maiores, at eius rem repellendus ab
+                        odit excepturi recusandae nobis natus.</p>
+                </div>
 
+                <div class="main__box flex">
+                    <img src="images/gears_icon.png" alt="" class="main__icon">
+                    <h3 class="main__title">Development</h3>
+                    <p class="main__descr">Ipsam vitae velit labore qui autem et veniam, nemo
+                        error.</p>
+                </div>
 
-            <div class="grid__box grid__box--a">
-                <img src="images/flag_icon.png" alt="icon of flag" class="services__icon">
-                <h3 class="section__h3 section__h3--light">Branding</h3>
-                <p class="section__h3__p section__h3__p--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-            </div>
+                <div class="main__box flex">
+                    <img src="images/rocket_icon.png" alt="" class="main__icon">
+                    <h3 class="main__title">Rocket Science</h3>
+                    <p class="main__descr">Amet dolore autem, magnam eligendi assumenda poptio
+                        provident similique fugiat.</p>
+                </div>
 
-            <div class="grid__box grid__box--b">
-                <img src="images/pen_icon.png" alt="icon of pen" class="services__icon">
-                <h3 class="section__h3 section__h3--light">Designed</h3>
-                <p class="section__h3__p section__h3__p--light">Vero in fugit maiores, at eius rem repellendus ab odit excepturi recusandae nobis natus. </p>
-
-            </div>
-            <div class="grid__box grid__box--c">
-                <img src="images/gears_icon.png" alt="icon of gears" class="services__icon">
-                <h3 class="section__h3 section__h3--light">Development</h3>
-                <p class="section__h3__p section__h3__p--light">Ipsam vitae velit labore qui autem et veniam, nemo error.</p>
-            </div>
-
-            <div class="grid__box grid__box--d">
-                <img src="images/rocket_icon.png" alt="icon of rocket" class="services__icon">
-                <h3 class="section__h3 section__h3--light">Rocket Science</h3>
-                <p class="section__h3__p section__h3__p--light">Amet dolore autem, magnam eligendi assumenda optio provident similique fugiat.</p>
             </div>
         </section>
 
-        <!-- section meet our beautiful team -->
-        <section class="section section--team grid">
+        <section class="section section--team section--darkFont flex">
 
-            <h2 class="section__h2 section__h2--dark">Meet our beautiful team</h2>
-            <p class="section__p section__p--dark">We are a small team of designer and developers, who help brands big ideas.</p>
+            <h2 class="section__title">Meet our beautiful team</h2>
+            <p class="section__descr">We are a small team of designer and developers, who help brands
+                big
+                ideas.</p>
 
-            <div class="grid__box grid__box--a">
-                <div class="photo__cropper">
-                    <img src="images/employer_photo_Anne_Hathaway.png" alt="photo of employer" class="photo">
-                </div>
-                <h3 class="section__h3 section__h3--dark">Anne Hathaway</h3>
-                <p class="section__h3__p section__h3__p--blue">CEO / Marketing Guru</p>
-                <p class="section__h3__p section__h3__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <div class="contact__container">
-                    <!-- social media buttons -->
-                    <a href="https://www.facebook.com/" target="_blank" class="contact__link" role="button" aria-pressed="true"><img src="images/fb_icon.png" alt="facebook icon" class="social__icon"></a>
-                    <a href="https://twitter.com/" target="_blank" class="contact__link" role="button" aria-pressed="true"><img src="images/twitter_icon.png" alt="twitter icon" class="social__icon"></a>
-                    <a href="https://pl.linkedin.com/" target="_blank" class="contact__link" role="button" aria-pressed="true"><img src="images/linkedin_icon.png" alt="LinkedIn logo" class="social__icon"></a>
-                    <a href="mailto:email@email.com" class="contact__link" role="button" aria-pressed="true"><img src="images/mail_icon.png" alt="email icon" class="social__icon"></a>
-                </div>
-            </div>
+            <div class="section__main section__main--team flex">
 
-            <div class="grid__box grid__box--b">
-                <div class="photo__cropper">
-                    <img src="images/employer_photo_Kate_Upton.png" alt="photo of employer" class="photo">
-                </div>
-                <h3 class="section__h3 section__h3--dark">Kate Upton</h3>
-                <p class="section__h3__p section__h3__p--blue">Creative Director</p>
-                <p class="section__h3__p section__h3__p--dark">Vero in fugit maiores, at eius rem repellendus ab odit excepturi recusandae nobis natus.</p>
-                <div class="contact__container">
-                    <!-- social media buttons -->
-                    <a href="https://twitter.com/" target="_blank" class="contact__link"><img src="images/twitter_icon.png" alt="twitter icon" class="social__icon"></a>
-                    <a href="https://pl.linkedin.com/" target="_blank" class="contact__link"><img src="images/linkedin_icon.png" alt="LinkedIn logo" class="social__icon"></a>
-                    <a href="mailto:email@email.com" class="contact__link"><img src="images/mail_icon.png" alt="email icon" class="social__icon"></a>
-                </div>
-            </div>
+                <div class="main__box main__box--team flex">
+                    <div class="photo__cropper">
+                        <img src="images/employer_photo_Anne_Hathaway.jpg" alt="photo of employer" class="photo">
+                    </div>
+                    <h3 class="main__title">Anne Hathaway</h3>
+                    <p class="main__descr main__descr--job">CEO / Marketing Guru</p>
+                    <p class="main__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
-            <div class="grid__box grid__box--c">
-                <div class="photo__cropper">
-                    <img src="images/emloyer_photo_Olivia_Wilde.png" alt="photo of employer" class="photo">
-                </div>
-                <h3 class="section__h3 section__h3--dark">Olivia Wilde</h3>
-                <p class="section__h3__p section__h3__p--blue">Lead Designer</p>
-                <p class="section__h3__p section__h3__p--dark">Ipsam vitae velit labore qui autem et veniam, nemo error.</p>
-                <div class="contact__container">
-                    <!-- social media buttons -->
-                    <a href="https://www.facebook.com/" target="_blank" class="contact__link"><img src="images/fb_icon.png" alt="facebook icon" class="social__icon"></a>
-                    <a href="https://twitter.com/" target="_blank" class="contact__link"><img src="images/twitter_icon.png" alt="twitter icon" class="social__icon"></a>
-                    <a href="https://pl.linkedin.com/" target="_blank" class="contact__link"><img src="images/linkedin_icon.png" alt="LinkedIn logo" class="social__icon"></a>
-                    <a href="mailto:email@email.com" class="contact__link"><img src="images/mail_icon.png" alt="email icon" class="social__icon"></a>
-                </div>
-            </div>
+                    <div class="socials__container flex">
 
-            <div class="grid__box grid__box--d">
-                <div class="photo__cropper">
-                    <img src="images/emloyer_photo_Ashley_Greene.png" alt="photo of employer" class="photo">
+                        <a href="https://www.facebook.com/" target="_blank" class="social__link" role="button"
+                        aria-pressed="true"><img src="images/fb_icon.png" alt="facebook icon" class="social__icon"></a>
+                        <a href="https://twitter.com/" target="_blank" class="social__link" role="button" aria-pressed="true"><img
+                            src="images/twitter_icon.png" alt="twitter icon" class="social__icon"></a>
+                        <a href="https://pl.linkedin.com/" target="_blank" class="social__link" role="button" aria-pressed="true"><img
+                            src="images/linkedin_icon.png" alt="LinkedIn logo" class="social__icon"></a>
+                        <a href="mailto:email@email.com" class="social__link" role="button" aria-pressed="true"><img src="images/mail_icon.png"
+                            alt="email icon" class="social__icon"></a>
+                    </div>
                 </div>
-                <h3 class="section__h3 section__h3--dark">Ashley Greene</h3>
-                <p class="section__h3__p section__h3__p--blue">SEO / Developer</p>
-                <p class="section__h3__p section__h3__p--dark">Amet dolore autem, magnam eligendi assumenda optio provident similique fugiat.</p>
-                <div class="contact__container">
-                    <!-- social media buttons -->
-                    <a href="https://www.facebook.com/" target="_blank" class="contact__link"><img src="images/fb_icon.png" alt="facebook icon" class="social__icon"></a>
-                    <a href="https://twitter.com/" target="_blank" class="contact__link"><img src="images/twitter_icon.png" alt="twitter icon" class="social__icon"></a>
-                    <a href="mailto:email@email.com" class="contact__link"><img src="images/mail_icon.png" alt="email icon" class="social__icon"></a>
+
+
+
+                <div class="main__box  main__box--team flex">
+                    <div class="photo__cropper">
+                        <img src="images/employer_photo_Kate_Upton.jpg" alt="photo of employer" class="photo">
+                    </div>
+                    <h3 class="main__title">Kate Upton</h3>
+                    <p class="main__descr main__descr--job">Creative Director</p>
+                    <p class="main__descr">Vero in fugit maiores, at eius rem repellendus ab
+                        odit
+                        excepturi recusandae nobis natus.</p>
+                    <div class="socials__container flex">
+
+                        <a href="https://twitter.com/" target="_blank" class="social__link"><img src="images/twitter_icon.png"
+                            alt="twitter icon" class="social__icon"></a>
+                        <a href="https://pl.linkedin.com/" target="_blank" class="social__link"><img src="images/linkedin_icon.png"
+                            alt="LinkedIn logo" class="social__icon"></a>
+                        <a href="mailto:email@email.com" class="social__link"><img src="images/mail_icon.png" alt="email icon"
+                            class="social__icon"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="main__box main__box--team flex">
+                    <div class="photo__cropper">
+                        <img src="images/emloyer_photo_Olivia_Wilde.jpg" alt="photo of employer" class="photo">
+                    </div>
+                    <h3 class="main__title">Olivia Wilde</h3>
+                    <p class="main__descr main__descr--job">Lead Designer</p>
+                    <p class="main__descr">Ipsam vitae velit labore qui autem et veniam,
+                        nemo
+                        error.</p>
+                    <div class="socials__container flex">
+
+                        <a href="https://www.facebook.com/" target="_blank" class="social__link"><img src="images/fb_icon.png"
+                            alt="facebook icon" class="social__icon"></a>
+                        <a href="https://twitter.com/" target="_blank" class="social__link"><img src="images/twitter_icon.png"
+                            alt="twitter icon" class="social__icon"></a>
+                        <a href="https://pl.linkedin.com/" target="_blank" class="social__link"><img src="images/linkedin_icon.png"
+                            alt="LinkedIn logo" class="social__icon"></a>
+                        <a href="mailto:email@email.com" class="social__link"><img src="images/mail_icon.png" alt="email icon"
+                            class="social__icon"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="main__box  main__box--team flex">
+                    <div class="photo__cropper">
+                        <img src="images/emloyer_photo_Ashley_Greene.jpg" alt="photo of employer" class="photo">
+                    </div>
+                    <h3 class="main__title">Ashley Greene</h3>
+                    <p class="main__descr main__descr--job">SEO / Developer</p>
+                    <p class="main__descr">Amet dolore autem, magnam eligendi assumenda
+                        optio
+                        provident similique fugiat.</p>
+                    <div class="socials__container flex">
+
+                        <a href="https://www.facebook.com/" target="_blank" class="social__link"><img src="images/fb_icon.png"
+                            alt="facebook icon" class="social__icon"></a>
+                        <a href="https://twitter.com/" target="_blank" class="social__link"><img src="images/twitter_icon.png"
+                            alt="twitter icon" class="social__icon"></a>
+                        <a href="mailto:email@email.com" class="social__link"><img src="images/mail_icon.png" alt="email icon"
+                            class="social__icon"></a>
+                    </div>
                 </div>
             </div>
 
         </section>
 
+        <section class="section section--skills section--darkFont flex">
 
-        <!-- section we got skills-->
-        <section class="section section--skills grid">
+            <h2 class="section__title">We got skills</h2>
+            <p class="section__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio, illo iusto esse soluta. </p>
+            <div class="section__main flex">
 
-            <h2 class="section__h2 section__h2--dark">We got skills</h2>
-            <p class="section__p section__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, illo iusto esse soluta. </p>
+                <div class="main__box flex">
+                    <div class="circle">
+                        <span class="percentage">90%</span>
+                        <div class="circle circle--skill skill--p90 circle--blue"></div>
 
-            <div class="skill__container grid__box grid__box--a">
-                <div class="circle circle--basis">
-                    <span class="percentage">90%</span>
-                    <div class="circle circle--skill skill--p90 circle--blue"></div>
-                    <!-- enter the value in the skill class modifier the same as the value given in span .percentage -->
-                    <div class="circle circle--fill fill--over50 circle--blue"></div>
-                    <!-- if skill value is up to 50% set a class fill--upto50, if over 50% set fill--over50, if equal 50% set only fill class -->
+                        <div class="circle circle--fill fill--over50 circle--blue"></div>
+
+                    </div>
+                    <h3 class="main__title">web design</h3>
                 </div>
-                <h3 class="section__h3 section__h3--dark">web design</h3>
-            </div>
 
-            <div class="skill__container grid__box grid__box--b">
-                <div class="circle circle--basis">
-                    <span class="percentage">75%</span>
-                    <div class="circle circle--skill skill--p75 circle--purple"></div>
-                    <!-- enter the value in the skill class modifier the same as the value given in span .percentage -->
-                    <div class="circle circle--fill fill--over50 circle--purple"></div>
-                    <!-- if skill value is up to 50% set a class fill--upto50, if over 50% set fill--over50, if equal 50% set only fill class -->
+                <div class="main__box flex">
+                    <div class="circle">
+                        <span class="percentage">75%</span>
+                        <div class="circle circle--skill skill--p75 circle--purple"></div>
+
+                        <div class="circle circle--fill fill--over50 circle--purple"></div>
+
+                    </div>
+                    <h3 class="main__title">html/css</h3>
                 </div>
-                <h3 class="section__h3 section__h3--dark">html/css</h3>
-            </div>
 
-            <div class="skill__container grid__box grid__box--c">
-                <div class="circle circle--basis">
-                    <span class="percentage">70%</span>
-                    <div class="circle circle--skill skill--p70 circle--green"></div>
-                    <!-- enter the value in the skill class modifier the same as the value given in span .percentage -->
-                    <div class="circle circle--fill fill--over50 circle--green"></div>
-                    <!-- if skill value is up to 50% set a class fill--upto50, if over 50% set fill--over50, if equal 50% set only fill class -->
+                <div class="main__box flex">
+                    <div class="circle">
+                        <span class="percentage">70%</span>
+                        <div class="circle circle--skill skill--p70 circle--green"></div>
+
+                        <div class="circle circle--fill fill--over50 circle--green"></div>
+
+                    </div>
+                    <h3 class="main__title">graphic design</h3>
                 </div>
-                <h3 class="section__h3 section__h3--dark">graphic design</h3>
-            </div>
 
-            <div class="skill__container grid__box grid__box--d">
-                <div class="circle circle--basis">
-                    <span class="percentage">85%</span>
-                    <div class="circle circle--skill skill--p85 circle--orange"></div>
-                    <!-- enter the value in theskill class  modifier the same as the value given in span .percentage -->
-                    <div class="circle circle--fill fill--over50 circle--orange"></div>
-                    <!-- if skill value is up to 50% set a class fill--upto50, if over 50% set fill--over50, if equal 50% set only fill class -->
+                <div class="main__box flex">
+                    <div class="circle">
+                        <span class="percentage">85%</span>
+                        <div class="circle circle--skill skill--p85 circle--orange"></div>
+
+                        <div class="circle circle--fill fill--over50 circle--orange"></div>
+
+                    </div>
+                    <h3 class="main__title">ui/ux</h3>
                 </div>
-                <h3 class="section__h3 section__h3--dark">ui/ux</h3>
             </div>
-
 
         </section>
 
-        <!-- section our portfolio-->
-        <section id="work" class="section section--portfolio grid grid--portfolio">
+        <section id="work" class="section section--portfolio section--darkFont flex">
 
-            <h2 class="section__h2 section__h2--dark">our portfolio</h2>
-            <p class="section__p section__p--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti eligendi enim cupiditate eos, sequi dolor quia placeat.</p>
+            <h2 class="section__title">our portfolio</h2>
+            <p class="section__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti eligendi
+                enim cupiditate eos, sequi dolor quia placeat.</p>
 
-            <div class="btn__container">
-                <!-- show/hidden portfolio works buttons-->
+            <div class="btn__container flex">
+
                 <button class="btn btn--portfolio">all</button>
                 <button class="btn btn--portfolio">web</button>
                 <button class="btn btn--portfolio">apps</button>
                 <button class="btn btn--portfolio">icons</button>
             </div>
 
+            <div class="section__main flex">
+                <figure class="main__box main__box--portfolio">
+                    <a href="" class="portfolio__work">
+                            <img src="images/isometric_mockup.png" alt="photo of isometric perspective mock up" class="portfolio__img">
+                        </a>
+                    <figcaption class="main__descr main__descr--figc">isometric perspective
+                        mock-up</figcaption>
+                </figure>
 
-            <figure class="grid__box--a">
-                <a href="">
-                    <img src="images/isometric_mockup.png" alt="photo of isometric perspective mock up" class="portfolio__img">
-                </a>
-                <figcaption class="section__p section__p--dark section__p--uppercase">isometric perspective mock-up</figcaption>
-            </figure>
+                <figure class="main__box main__box--portfolio">
+                    <a href="" class="portfolio__work">
+                            <img src="images/timezone.png" alt="photo of time zone app ui" class="portfolio__img">
+                        </a>
+                    <figcaption class="main__descr main__descr--figc">time zone app ui</figcaption>
+                </figure>
 
-            <figure class="grid__box--b">
-                <a href="">
-                    <img src="images/timezone.png" alt="photo of time zone app ui" class="portfolio__img">
-                </a>
-                <figcaption class="section__p section__p--dark section__p--uppercase">time zone app ui</figcaption>
-            </figure>
+                <figure class="main__box main__box--portfolio">
+                    <a href="" class="portfolio__work">
+                            <img src="images/viromedia.png" alt="photo of viro media players ui" class="portfolio__img">
+                        </a>
+                    <figcaption class="main__descr main__descr--figc">viro media players ui</figcaption>
+                </figure>
 
-            <figure class="grid__box--c">
-                <a href="">
-                    <img src="images/viromedia.png" alt="photo of viro media players ui" class="portfolio__img">
-                </a>
-                <figcaption class="section__p section__p--dark section__p--uppercase">viro media players ui</figcaption>
-            </figure>
-
-            <figure class="grid__box--d">
-                <a href="">
-                    <img src="images/blog.png" alt="photo of blog/magazine flat UI KIT" class="portfolio__img">
-                </a>
-                <figcaption class="section__p section__p--dark section__p--uppercase">blog / magazine flat ui kit</figcaption>
-            </figure>
+                <figure class="main__box main__box--portfolio">
+                    <a href="" class="portfolio__work">
+                            <img src="images/blog.png" alt="photo of blog/magazine flat UI KIT" class="portfolio__img">
+                        </a>
+                    <figcaption class="main__descr main__descr--figc">blog / magazine flat ui
+                        kit</figcaption>
+                </figure>
+            </div>
 
 
             <button class="btn btn--more">load more projects</button>
 
         </section>
 
-        <!-- section what people say about us-->
-        <section class="section section--testimonials grid grid--testimonials">
 
-            <h2 class="section__h2 section__h2--light">what people say about us</h2>
-            <p class="section__p section__p--light">Our clients love us!</p>
+        <section class="section section--testimonials section--whiteFont flex">
 
-            <div class="testimonials__conteiner grid__box--a">
-                <div class="photo__cropper photo__cropper--small">
-                    <img src="images/customer_photo_Chanel_Iman.png" alt="customer's photo" class="photo">
+            <h2 class="section__title">what people say about us</h2>
+            <p class="section__descr">Our clients love us!</p>
+
+            <div class="section__main flex">
+
+                <div class="main__box main__box--testimonials flex">
+                    <div class="photo__cropper photo__cropper--small">
+                        <img src="images/customer_photo_Chanel_Iman.png" alt="customer's photo" class="photo photo--small">
+                    </div>
+                    <div class="quote__container">
+                        <blockquote class="quote"> "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                            unde
+                            voluptas reiciendis fugiat dicta illum"</blockquote>
+                        <cite class="author">Chanel Iman <span class="job">CEO of Pinterest</span><cite>
+                    </div>
                 </div>
-                <p class="section__h3__p section__h3__p--light section__h3__p--quote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga unde voluptas reiciendis fugiat dicta illum"</p>
-                <h3 class="section__h3 section__h3--light section__h3--customer">Chanel Iman</h3>
-                <p class="section__h3__p section__h3__p--yellow">CEO of Pinterest</p>
-            </div>
 
-            <div class="testimonials__conteiner grid__box--b">
-                <div class="photo__cropper photo__cropper--small">
-                    <img src="images/customer_photo_adrianna_lima.png" alt="customer's photo" class="photo">
+                <div class="main__box main__box--testimonials flex">
+                    <div class="photo__cropper photo__cropper--small">
+                        <img src="images/customer_photo_adrianna_lima.png" alt="customer's photo" class="photo photo--small">
+                    </div>
+                    <div class="quote__container">
+                        <blockquote class="quote"> "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Fuga
+                            unde
+                            voluptas reiciendis fugiat dicta illum"</blockquote>
+                        <cite class="author">Adianna Lima <span class="job">Founder of Instagram</span><cite>
+                    </div>
                 </div>
-                <p class="section__h3__p section__h3__p--light section__h3__p--quote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga unde voluptas reiciendis fugiat dicta illum"</p>
-                <h3 class="section__h3 section__h3--light section__h3--customer">Adrianna Lima</h3>
-                <p class="section__h3__p section__h3__p--yellow">Founder of Instagram</p>
-            </div>
 
-            <div class="testimonials__conteiner grid__box--c">
-                <div class="photo__cropper photo__cropper--small">
-                    <img src="images/customer_photo_anne_hathaway.png" alt="customer's photo" class="photo">
+                <div class="main__box main__box--testimonials flex">
+                    <div class="photo__cropper photo__cropper--small">
+                        <img src="images/customer_photo_anne_hathaway.png" alt="customer's photo" class="photo photo--small">
+                    </div>
+                    <div class="quote__container">
+                        <blockquote class="quote"> "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Fuga
+                            unde
+                            voluptas reiciendis fugiat dicta illum"</blockquote>
+                        <cite class="author">Anne Hathaway <span class="job">Lead Designer at Behance</span><cite>
+                    </div>
                 </div>
-                <p class="section__h3__p section__h3__p--light section__h3__p--quote">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga unde voluptas reiciendis fugiat dicta illum"</p>
-                <h3 class="section__h3 section__h3--light section__h3--customer">Anne Hathaway</h3>
-                <p class="section__h3__p section__h3__p--yellow">Lead Designer at Behance</p>
-            </div>
 
-            <div class="testimonials__conteiner grid__box--d">
-                <div class="photo__cropper photo__cropper--small">
-                    <img src="images/customer_photo_emma_stone.png" alt="customer's photo" class="photo">
+                <div class="main__box main__box--testimonials flex">
+                    <div class="photo__cropper photo__cropper--small">
+                        <img src="images/customer_photo_emma_stone.png" alt="customer's photo" class="photo photo--small">
+                    </div>
+                    <div class="quote__container">
+                        <blockquote class="quote"> "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                            unde
+                            voluptas reiciendis fugiat dicta illum"</blockquote>
+                        <cite class="author">Emma Stone <span class="job">Co-Founder of Shazam</span><cite>
+                    </div>
                 </div>
-                <p class="section__h3__p section__h3__p--light section__h3__p--quote">"Lorem ipsmet, consectetur adipisicing elit. Fuga unde voluptas reiciendis fugiat dicta illum"</p>
-                <h3 class="section__h3 section__h3--light section__h3--customer">Emma Stone</h3>
-                <p class="section__h3__p section__h3__p--yellow">Co-Founder of Shazam</p>
+
             </div>
 
         </section>
 
-        <!-- section get in touch-->
-        <section id="contact" class="section section--contact grid grid--contact">
 
-            <h2 class="section__h2 section__h2--light">get in touch</h2>
-            <address class="section__p section__p--light">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111</address>
+        <section id="contact" class="section section--contact section--whiteFont flex">
 
-            <form class="form grid grid--form" action="#" method="post">
-                <label class="form__label" for="name"></label>
-                <input class="form__input form__input--name" type="text" id="name" name="name" title="Enter your name" placeholder="Your Name*" required>
+            <h2 class="section__title">get in touch</h2>
+            <address class="section__descr">1600 Pennsylvania Ave NW, Washington, DC 20500, United
+                States
+                of America. Tel: (202) 456-1111</address>
 
-                <label class="form__label" for="email"></label>
-                <input class="form__input form__input--email" type="email" id="email" name="name" title="Enter your e-mail" placeholder="Your Email*" required>
+            <form class="section__main section__main--form flex" action="#" method="post">
+                <!--no label on graph project-->
+                <input class="form form--input" type="text" id="name" name="name" title="Enter your name" placeholder="Your Name*"
+                    required>
 
-                <label class="form__label" for="message"></label>
-                <textarea class="form__textarea" name="message" id="message" title="Enter your message" placeholder="Your Message*"></textarea>
+                <input class="form form--input" type="email" id="email" name="name" title="Enter your e-mail"
+                    placeholder="Your Email*" required>
+
+                <textarea rows="6" class="form form--textarea" name="message" id="message" title="Enter your message"
+                    placeholder="Your Message*"></textarea>
 
                 <button class="btn btn--send" type="submit">send message</button>
 
@@ -326,10 +380,8 @@
 
     </main>
 
-
-    <!-- section footer -->
-    <footer class="section section--footer grid grid--footer">
-        <ul class="footer__container">
+    <footer class="section section--footer">
+        <ul class="footer__container flex">
 
             <li><a href="" class="footer__link">Facebook</a></li>
             <li><a href="" class="footer__link">Twitter</a></li>
@@ -341,10 +393,9 @@
         </ul>
     </footer>
 
+
+    <script src="javascript.js"></script>
+
 </body>
 
 </html>
-
-
-
-
