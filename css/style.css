@@ -49,21 +49,22 @@ header.section--header {
 .nav {
     position: fixed;
     top: 0%;
-	bottom: 0%;
+    bottom: 0%;
     left: -100%;
-	right: 100%;
-	padding: 100px 0 20px;
-	z-index: 999;
-	transition: .3s linear;
+    right: 100%;
+    padding: 100px 0 20px;
+    z-index: 999;
+    transition: .3s linear;
 }
 
 /* show menu */
 .nav.active {
-	left: 0%;
-	right: 0%;
-	padding-left: 50px;
-	padding-right: 50px;
+    left: 0%;
+    right: 0%;
+    padding-left: 50px;
+    padding-right: 50px;
     background-color: #87509c;
+    overflow: hidden;
 }
 
 .nav__list {
