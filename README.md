@@ -11,8 +11,9 @@ Mobile First approach
 
 Tech Work used:
 - HTML5
-- pure CSS3
-- GRID/FLEXBOX
+- CSS3
+- FLEXBOX
+- jQuery
 
 LIVE: https://tomi5.github.io/cuda_single_pages/
 
