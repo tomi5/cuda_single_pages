@@ -1,6 +1,6 @@
 /*
 	===========================
-	GENERAL
+	GLOBAL SETTINGS
 	===========================
 */
 
@@ -31,7 +31,11 @@ body {
 }
 
 
-/* section HEADER star */
+/*
+	===========================
+	HEADER SECTION
+	===========================
+*/
 
 header.section--header {
     height: 100vh;
@@ -57,7 +61,7 @@ header.section--header {
     transition: .3s linear;
 }
 
-/* show menu */
+/* menu show */
 .nav.active {
     left: 0%;
     right: 0%;
@@ -129,7 +133,7 @@ header.section--header {
     line-height: 1.5
 }
 
-/* break line in header__h1 for mobile */
+/* break line in header H1 for mobile */
 .br {
     display: inline;
 }
@@ -162,7 +166,7 @@ header.section--header {
     background-color: #eb7d4b;
 }
 
-/* BURGER */
+/* Burger */
 
 .burger {
     position: fixed;
@@ -191,6 +195,10 @@ header.section--header {
     left: 0;
     -webkit-transition: .2s;
     transition: .2s;
+}
+
+.burger__bar.dark {
+    background-color: #3c4761;
 }
 
 .burger__bar--bar1 {
@@ -227,7 +235,11 @@ header.section--header {
     transform: translateY(50%) rotate(-45deg);
 }
 
-/* general section */
+/*
+	===========================
+	SECTIONS - Globals settings
+	===========================
+*/
 
 .section {
     width: 100%;
@@ -310,7 +322,11 @@ header.section--header {
     font-weight: 300;
 }
 
-/*section services*/
+/*
+	===========================
+	SERVICES SECTION
+	===========================
+*/
 
 .section--services {
     background-color: #17c2a4;
@@ -325,7 +341,11 @@ header.section--header {
     height: auto;
 }
 
-/*section Team*/
+/*
+	===========================
+	TEAM SECTION
+	===========================
+*/
 
 .section--team {
     background-color: #e7f1f8;
@@ -371,17 +391,17 @@ header.section--header {
     margin: 5px;
 }
 
-/*section skills*/
+/*
+	===========================
+	SKILLS SECTION
+	===========================
+*/
 
 .section--skills {
     background-color: #fff;
 }
 
-/*
-    ============
-   SKILL CIRCLES
-    ============
-*/
+/* skill circles */
 
 .circle {
     position: relative;
@@ -462,9 +482,7 @@ header.section--header {
     transform: rotate(180deg);
 }
 
-/* 
- * color of circles
- */
+/* circle color */
 
 .circle--blue {
     background-color: #30bae7;
@@ -507,7 +525,11 @@ header.section--header {
     transform: rotate(calc(85 * 360deg / 100));
 }
 
-/*section portfolio */
+/*
+	===========================
+	PORTFOLIO SECTION
+	===========================
+*/
 
 .section--portfolio {
     background-color: #ffdd99;
@@ -526,6 +548,16 @@ header.section--header {
     color: #393939;
     background-color: rgba(0, 0, 0, 0.078);
     border: none;
+}
+
+.btn--portfolio.active {
+    background-color: #fff;
+}
+
+.main__box--portfolio {
+    margin-left: auto;
+    margin-right: auto;
+    /* center if only one work is shown */
 }
 
 .portfolio__work {
@@ -547,7 +579,11 @@ header.section--header {
     background-color: #17c2a4;
 }
 
-/* section testimonials */
+/*
+	===========================
+	TESTIMONIALS SECTION
+	===========================
+*/
 
 .section--testimonials {
     background-color: #d74680;
@@ -599,7 +635,11 @@ header.section--header {
     text-transform: none;
 }
 
-/* section contact */
+/*
+	===========================
+	CONTACT SECTION
+	===========================
+*/
 
 .section--contact {
     background-color: #3c5499;
@@ -633,7 +673,11 @@ header.section--header {
     text-align: center;
 }
 
-/* section footer */
+/*
+	===========================
+	FOOTER SECTION
+	===========================
+*/
 
 .section.section--footer {
     background-color: #344b8e;
@@ -661,10 +705,11 @@ header.section--header {
 }
 
 /*
--------
-MEDIA QUERIES
--------
+	===========================
+	MEDIA QUERIES
+	===========================
 */
+
 @media (min-width: 359px) {
     .nav__container {
         -ms-flex-item-align: stretch;
@@ -784,6 +829,16 @@ MEDIA QUERIES
         top: 12%;
     }
 
+    .btn {
+        width: 293px;
+        height: 70px;
+        line-height: 62px;
+    }
+
+    .btn:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
     .section {
         padding: 65px 70px 100px;
     }
@@ -792,12 +847,37 @@ MEDIA QUERIES
         font-size: 4em;
     }
 
+    .social__link {
+        opacity: .6;
+    }
+
+    .social__link:hover {
+        opacity: 1;
+    }
+
+    .btn--portfolio.checked:hover {
+        background-color: #fff;
+    }
+
+
+    .btn--portfolio:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .btn--portfolio.active:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
     .main__box.main__box--testimonials {
         flex-basis: 47%;
     }
 
     .form--input {
         flex-basis: 47%;
+    }
+
+    .footer__link:hover {
+        color: #30bae7
     }
 
     .footer__container li {
@@ -841,10 +921,6 @@ MEDIA QUERIES
     .btn {
         margin-bottom: 0px;
         transition: .3s;
-    }
-
-    .btn:hover {
-        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .nav {
@@ -920,22 +996,13 @@ MEDIA QUERIES
         margin-bottom: 40px;
     }
 
-    .social__link:hover {
-        opacity: .5;
-    }
-
     .main__box--portfolio {
-        margin: 15px 0;
+        margin: 15px auto;
         flex-basis: 47%;
     }
 
-    .btn--portfolio:hover {
-        background-color: #fff;
-
-    }
-
-    .footer__link:hover {
-        color: #30bae7
+    .main__box--portfolio.hidden {
+        display: none;
     }
 }
 

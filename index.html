@@ -38,7 +38,8 @@
         </div>
 
         <h1 class="header__h1">
-			Hi there! <span class="br br--mobile"></span> We are the new kids on the block <span class="br br--desktop"></span>and we build awesome website and mobile apps.</h1>
+            Hi there! <span class="br br--mobile"></span> We are the new kids on the block <span class="br br--desktop"></span>and
+            we build awesome website and mobile apps.</h1>
 
         <a href="#contact" class="btn btn--header" role="button" aria-pressed="true">work with us!</a>
 
@@ -248,14 +249,14 @@
 
             <div class="btn__container flex">
 
-                <button class="btn btn--portfolio">all</button>
-                <button class="btn btn--portfolio">web</button>
-                <button class="btn btn--portfolio">apps</button>
-                <button class="btn btn--portfolio">icons</button>
+                <button data-filter="all" class="btn btn--portfolio active">all</button>
+                <button data-filter="web" class="btn btn--portfolio">web</button>
+                <button data-filter="apps" class="btn btn--portfolio">apps</button>
+                <button data-filter="icons" class="btn btn--portfolio">icons</button>
             </div>
 
-            <div class="section__main flex">
-                <figure class="main__box main__box--portfolio">
+            <div class="section__main section__main--works flex">
+                <figure data-category="web" class="main__box main__box--portfolio">
                     <a href="" class="portfolio__work">
                             <img src="images/isometric_mockup.png" alt="photo of isometric perspective mock up" class="portfolio__img">
                         </a>
@@ -263,27 +264,44 @@
                         mock-up</figcaption>
                 </figure>
 
-                <figure class="main__box main__box--portfolio">
+                <figure data-category="apps" class="main__box main__box--portfolio">
                     <a href="" class="portfolio__work">
                             <img src="images/timezone.png" alt="photo of time zone app ui" class="portfolio__img">
                         </a>
                     <figcaption class="main__descr main__descr--figc">time zone app ui</figcaption>
                 </figure>
 
-                <figure class="main__box main__box--portfolio">
+                <figure data-category="web" class="main__box main__box--portfolio">
                     <a href="" class="portfolio__work">
                             <img src="images/viromedia.png" alt="photo of viro media players ui" class="portfolio__img">
                         </a>
                     <figcaption class="main__descr main__descr--figc">viro media players ui</figcaption>
                 </figure>
 
-                <figure class="main__box main__box--portfolio">
-                    <a href="" class="portfolio__work">
+                <figure data-category="icons" class="main__box main__box--portfolio">
+                    <a href="#" class="portfolio__work">
                             <img src="images/blog.png" alt="photo of blog/magazine flat UI KIT" class="portfolio__img">
                         </a>
                     <figcaption class="main__descr main__descr--figc">blog / magazine flat ui
                         kit</figcaption>
                 </figure>
+
+                <figure data-category="icons" class="main__box main__box--portfolio hidden">
+                    <a href="#" class="portfolio__work">
+                            <img src="images/blog.png" alt="photo of blog/magazine flat UI KIT" class="portfolio__img">
+                        </a>
+                    <figcaption class="main__descr main__descr--figc">blog / magazine flat ui
+                        kit</figcaption>
+                </figure>
+
+                <figure data-category="apps" class="main__box main__box--portfolio hidden">
+                    <a href="" class="portfolio__work">
+                            <img src="images/timezone.png" alt="photo of time zone app ui" class="portfolio__img">
+                        </a>
+                    <figcaption class="main__descr main__descr--figc">time zone app ui</figcaption>
+                </figure>
+
+
             </div>
 
 
@@ -393,6 +411,8 @@
     </footer>
 
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="javascript.js"></script>
 
 </body>
