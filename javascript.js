@@ -27,30 +27,49 @@ $('.nav__list__link').on('click', function () {
 
 })
 
-//change burger color
+$('.btn__scrollToTop').on('click', function () {
+	$('body, html').animate({
+		scrollTop: $('body, html').offset().top
+	}, 500)
+})
 
 $(document).on('scroll', function () {
 	const $scrollValue = $(this).scrollTop();
+	const $services = $('.section--services');
 	const $team = $('.section--team');
 	const $testimonials = $('.section--testimonials');
+
+	const $servicesFromTop = $services.offset().top;
 	const $teamFromTop = $team.offset().top;
 	const $testimonialsFromTop = $testimonials.offset().top;
 	const $burgerFromTop = $('.burger').css('top').replace('px', '')
-
-
+	//change burger color
 	if ($scrollValue > $teamFromTop - $burgerFromTop && $scrollValue < $testimonialsFromTop - $burgerFromTop) {
 		$('.burger__bar').addClass('dark');
 
 	} else {
 		$('.burger__bar').removeClass('dark');
 	}
+
+	// show btn ScrollToTop
+	const $docWidth = $(document).width();
+
+	if ($scrollValue > $servicesFromTop / 2 && $docWidth > 1023) {
+		$('.btn__scrollToTop').fadeIn(300, 'linear');
+	} else {
+		$('.btn__scrollToTop').fadeOut(300, 'linear');
+	}
+
 })
+
 
 
 // portfolio works filter
 
 const $filters = $('.btn__container [data-filter]');
+const $filterALL = $('.btn__container [data-filter = "all"]');
 const $works = $('.section__main--works [data-category]');
+
 
 $filters.on('click', function () {
 
@@ -58,14 +77,13 @@ $filters.on('click', function () {
 	$(this).toggleClass('active');
 
 	const $filterWorks = $(this).attr('data-filter');
-	const $works = $('.section__main--works [data-category]');
 
 	if ($filterWorks == 'all') {
-		$works.fadeOut(300, 'linear').promise().done(function () {
+		$works.fadeOut().promise().done(function () {
 			$works.fadeIn(300, 'linear');
 		});
 	} else {
-		$works.fadeOut(300, 'linear').promise().done(function () {
+		$works.fadeOut().promise().done(function () {
 			$works.filter('[data-category = "' + $filterWorks + '"]')
 				.fadeIn(300, 'linear');
 		});
@@ -74,8 +92,9 @@ $filters.on('click', function () {
 
 // load more projects
 
-
 $('.btn--more').on('click', function () {
-	$('.hidden').fadeIn(500);
 	$('.btn--more').fadeOut(500);
+	$('.hidden').removeClass('hidden');
+	$filters.removeClass('active');
+	$filterALL.addClass('active');
 })
