@@ -10,7 +10,7 @@ function toggleActive() {
 
 $('.burger').on('click', toggleActive);
 
-$('.nav__list__link').on('click', function () {
+$('.nav__link').on('click', function () {
 	if ($('nav').hasClass('active')) {
 		toggleActive();
 	}
@@ -19,7 +19,7 @@ $('.nav__list__link').on('click', function () {
 
 //scroll to section
 
-$('.nav__list__link').on('click', function () {
+$('.nav__link').on('click', function () {
 	const goToSection = $(this).attr('href');
 	$('body, html').animate({
 		scrollTop: $(goToSection).offset().top
