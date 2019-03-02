@@ -4,14 +4,14 @@ Project Title:
 
 PSD TO HTML
 
-My first try to make a responsive single page website from PSD.
+My first RWD single page website convert from PSD.
 
 Mobile First approach
 
 
 Tech Work used:
 - HTML5
-- CSS3
+- pure CSS3
 - FLEXBOX
 - jQuery
 
