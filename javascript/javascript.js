@@ -6,6 +6,14 @@ function toggleActive() {
 	$('nav').toggleClass('active');
 	$('.logo__container').toggleClass('active');
 	$('.burger__bar').removeClass('dark');
+	let x = $('.burger').attr("aria-expanded"); 
+ if (x == "true") 
+  {
+ x = "false"
+ } else {
+ x = "true"
+}
+$('.burger').attr("aria-expanded", x);
 }
 
 $('.burger').on('click', toggleActive);
@@ -19,7 +27,7 @@ $('.nav__link').on('click', function () {
 
 //scroll to section
 
-$('.nav__link').on('click', function () {
+$('.nav__link, .btn__scrollToTop').on('click', function () {
 	const goToSection = $(this).attr('href');
 	$('body, html').animate({
 		scrollTop: $(goToSection).offset().top
@@ -27,11 +35,6 @@ $('.nav__link').on('click', function () {
 
 })
 
-$('.btn__scrollToTop').on('click', function () {
-	$('body, html').animate({
-		scrollTop: $('body, html').offset().top
-	}, 500)
-})
 
 $(document).on('scroll', function () {
 	const $scrollValue = $(this).scrollTop();
