@@ -1,4 +1,4 @@
-# Cuda single pages - educional project
+# Cuda single pages - educational project
 
 
 
