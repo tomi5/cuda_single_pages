@@ -2,7 +2,7 @@
 
 
 
-## My first RWD single page website convert from PSD.
+## My first RWD single page website converted from PSD.
 
 ###### Mobile First approach
 
